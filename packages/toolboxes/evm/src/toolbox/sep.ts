@@ -9,7 +9,7 @@ import { BaseEVMToolbox } from "./BaseEVMToolbox.ts";
 
 const getNetworkParams = () => ({
   chainId: "0xaa36a7",
-  chainName: "Sepolia",
+  chainName: "Sepolia test network",
   nativeCurrency: { name: "SepoliaETH", symbol: "ETH", decimals: BaseDecimal.SEP },
   // Use external rpc URL so wallets don't throw warning to user
   rpcUrls: ["https://sepolia.infura.io/v3/"],

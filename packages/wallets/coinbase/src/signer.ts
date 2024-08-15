@@ -66,6 +66,7 @@ export const getWalletForChain = async ({
 }): Promise<ReturnType<ReturnType<typeof getToolboxByChain>> & { address: string }> => {
   switch (chain) {
     case Chain.Ethereum:
+    case Chain.Sepolia:
     case Chain.Avalanche:
     case Chain.Arbitrum:
     case Chain.Optimism:

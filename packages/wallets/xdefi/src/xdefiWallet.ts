@@ -1,6 +1,6 @@
 import {
   Chain,
-  ChainId,
+  type ChainId,
   ChainToChainId,
   ChainToHexChainId,
   ChainToRPC,
@@ -10,7 +10,6 @@ import {
   WalletOption,
   ensureEVMApiKeys,
   setRequestClientConfig,
-  switchEVMWalletNetwork,
 } from "@lastnetwork/helpers";
 import type { ARBToolbox, AVAXToolbox, BSCToolbox } from "@lastnetwork/toolbox-evm";
 
@@ -127,7 +126,6 @@ async function getWalletMethodsForChain({
 
       try {
         chain !== Chain.Ethereum &&
-          chain !== Chain.Sepolia &&
           (await addEVMWalletNetwork(
             //@ts-expect-error
             ethereumWindowProvider,
@@ -136,9 +134,9 @@ async function getWalletMethodsForChain({
                 | ReturnType<typeof AVAXToolbox>
                 | ReturnType<typeof BSCToolbox>
                 | ReturnType<typeof ARBToolbox>
+                | ReturnType<typeof SEPToolbox>
             ).getNetworkParams(),
           ));
-        chain === Chain.Sepolia && (await switchEVMWalletNetwork(provider, ChainId.SepoliaHex));
       } catch (_error) {
         throw new SwapKitError({
           errorKey: "wallet_failed_to_add_or_switch_network",
