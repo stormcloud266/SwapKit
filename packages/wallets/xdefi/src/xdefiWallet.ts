@@ -1,6 +1,6 @@
 import {
   Chain,
-  type ChainId,
+  ChainId,
   ChainToChainId,
   ChainToHexChainId,
   ChainToRPC,
@@ -10,6 +10,7 @@ import {
   WalletOption,
   ensureEVMApiKeys,
   setRequestClientConfig,
+  switchEVMWalletNetwork,
 } from "@lastnetwork/helpers";
 import type { ARBToolbox, AVAXToolbox, BSCToolbox } from "@lastnetwork/toolbox-evm";
 
@@ -39,6 +40,7 @@ export const XDEFI_SUPPORTED_CHAINS = [
   Chain.Polygon,
   Chain.Solana,
   Chain.THORChain,
+  Chain.Sepolia,
 ] as const;
 
 async function getWalletMethodsForChain({
@@ -100,6 +102,7 @@ async function getWalletMethodsForChain({
     case Chain.BinanceSmartChain:
     case Chain.Ethereum:
     case Chain.Optimism:
+    case Chain.Sepolia:
     case Chain.Polygon: {
       const { prepareNetworkSwitch, addEVMWalletNetwork } = await import("@lastnetwork/helpers");
       const {
@@ -124,6 +127,7 @@ async function getWalletMethodsForChain({
 
       try {
         chain !== Chain.Ethereum &&
+          chain !== Chain.Sepolia &&
           (await addEVMWalletNetwork(
             //@ts-expect-error
             ethereumWindowProvider,
@@ -134,6 +138,7 @@ async function getWalletMethodsForChain({
                 | ReturnType<typeof ARBToolbox>
             ).getNetworkParams(),
           ));
+        chain === Chain.Sepolia && (await switchEVMWalletNetwork(provider, ChainId.SepoliaHex));
       } catch (_error) {
         throw new SwapKitError({
           errorKey: "wallet_failed_to_add_or_switch_network",
@@ -142,7 +147,7 @@ async function getWalletMethodsForChain({
       }
 
       const api =
-        chain === Chain.Ethereum
+        chain === Chain.Ethereum || chain === Chain.Sepolia
           ? ethplorerApi(apiKeys.ethplorerApiKey)
           : covalentApi({ apiKey: apiKeys.covalentApiKey, chainId: ChainToChainId[chain] });
 

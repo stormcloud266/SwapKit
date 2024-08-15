@@ -8,6 +8,7 @@ export enum ContractAddress {
   BSC = "0x0000000000000000000000000000000000000000",
   MATIC = "0x0000000000000000000000000000000000001010",
   OP = "0x4200000000000000000000000000000000000042",
+  SEP = "0x0000000000000000000000000000000000000000",
 }
 
 export enum DerivationPath {
@@ -29,6 +30,7 @@ export enum DerivationPath {
   MAYA = "m/44'/931'/0'/0",
   OP = "m/44'/60'/0'/0",
   SOL = "m/44'/501'/0'/0",
+  SEP = "m/44'/60'/0'/0",
   THOR = "m/44'/931'/0'/0",
   XRD = "////",
 }
@@ -45,6 +47,7 @@ export const NetworkDerivationPath: Record<Chain, DerivationPathArray> = {
   DASH: [44, 5, 0, 0, 0],
   DOGE: [44, 3, 0, 0, 0],
   ETH: [44, 60, 0, 0, 0],
+  SEP: [44, 60, 0, 0, 0],
   GAIA: [44, 118, 0, 0, 0],
   KUJI: [44, 118, 0, 0, 0],
   LTC: [84, 2, 0, 0, 0],

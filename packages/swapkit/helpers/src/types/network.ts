@@ -18,6 +18,7 @@ export enum RPCUrl {
   Polkadot = "wss://rpc.polkadot.io",
   Polygon = "https://polygon-rpc.com",
   Radix = "https://radix-mainnet.rpc.grove.city/v1/326002fc/core",
+  Sepolia = "https://native-amm.vercel.app/rpc/sepolia",
   THORChain = "https://rpc.thorswap.net",
   THORChainStagenet = "https://stagenet-rpc.ninerealms.com",
   Solana = "https://mainnet.helius-rpc.com/?api-key=2cbe3ae6-cfc5-4141-a093-0055d0fa3d80",
@@ -42,6 +43,7 @@ export enum ExplorerUrl {
   Polkadot = "https://polkadot.subscan.io",
   Polygon = "https://polygonscan.com",
   Radix = "https://dashboard.radixdlt.com",
+  Sepolia = "https://sepolia.etherscan.io",
   THORChain = "https://runescan.io",
   Solana = "https://solscan.io",
 }

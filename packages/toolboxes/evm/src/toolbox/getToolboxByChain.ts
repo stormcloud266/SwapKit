@@ -7,6 +7,7 @@ import { BSCToolbox } from "./bsc.ts";
 import { ETHToolbox } from "./eth.ts";
 import { MATICToolbox } from "./matic.ts";
 import { OPToolbox } from "./op.ts";
+import { SEPToolbox } from "./sep.ts";
 
 type ToolboxType = {
   ARB: typeof ARBToolbox;
@@ -16,6 +17,7 @@ type ToolboxType = {
   ETH: typeof ETHToolbox;
   MATIC: typeof MATICToolbox;
   OP: typeof OPToolbox;
+  SEP: typeof SEPToolbox;
 };
 
 export const getToolboxByChain = <T extends keyof ToolboxType>(chain: T): ToolboxType[T] => {
@@ -34,6 +36,8 @@ export const getToolboxByChain = <T extends keyof ToolboxType>(chain: T): Toolbo
       return BSCToolbox as ToolboxType[T];
     case Chain.Ethereum:
       return ETHToolbox as ToolboxType[T];
+    case Chain.Sepolia:
+      return SEPToolbox as ToolboxType[T];
     default:
       throw new Error(`Chain ${chain} is not supported`);
   }

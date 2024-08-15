@@ -19,6 +19,7 @@ export enum Chain {
   Chainflip = "FLIP",
   Polygon = "MATIC",
   Radix = "XRD",
+  Sepolia = "SEP",
   THORChain = "THOR",
   Solana = "SOL",
 }
@@ -52,6 +53,8 @@ export enum ChainId {
   Polygon = "137",
   PolygonHex = "0x89",
   Radix = "radix-mainnet",
+  Sepolia = "11155111",
+  SepoliaHex = "0xaa36a7",
   THORChain = "thorchain-mainnet-v1",
   THORChainStagenet = "thorchain-stagenet-v2",
   Solana = "solana",
@@ -84,6 +87,8 @@ export const ChainIdToChain: Record<ChainId, Chain> = {
   [ChainId.PolygonHex]: Chain.Polygon,
   [ChainId.Polygon]: Chain.Polygon,
   [ChainId.Radix]: Chain.Radix,
+  [ChainId.Sepolia]: Chain.Sepolia,
+  [ChainId.SepoliaHex]: Chain.Sepolia,
   [ChainId.THORChainStagenet]: Chain.THORChain,
   [ChainId.THORChain]: Chain.THORChain,
   [ChainId.Solana]: Chain.Solana,
@@ -114,6 +119,7 @@ export const BaseDecimal: Record<Chain, number> = {
   SOL: 9,
   THOR: 8,
   XRD: 18,
+  SEP: 18,
 };
 
 export type SubstrateChain = Chain.Polkadot | Chain.Chainflip;
@@ -126,7 +132,8 @@ export type EVMChain =
   | Chain.BinanceSmartChain
   | Chain.Ethereum
   | Chain.Optimism
-  | Chain.Polygon;
+  | Chain.Polygon
+  | Chain.Sepolia;
 export const EVMChains = [
   Chain.Arbitrum,
   Chain.Avalanche,
@@ -135,6 +142,7 @@ export const EVMChains = [
   Chain.Ethereum,
   Chain.Optimism,
   Chain.Polygon,
+  Chain.Sepolia,
 ] as const;
 
 export type UTXOChain =
