@@ -40,7 +40,8 @@
     "test:coverage": "bun --filter '*' test:coverage",
     "type-check": "bun --filter '*' type-check",
     "version-bump": "bun changeset version",
-    "wizard": "bun --cwd ./packages/swapkit/wizard"
+    "wizard": "bun --cwd ./packages/swapkit/wizard",
+    "prepare": "bun run build"
   },
   "trustedDependencies": [
     "@biomejs/biome",
