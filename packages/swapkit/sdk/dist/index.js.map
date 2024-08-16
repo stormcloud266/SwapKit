@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "sources": ["../src/index.ts"],
+  "sourcesContent": [
+    "import { SwapKit, type SwapKitParams } from \"@swapkit/core\";\nimport { ChainflipPlugin } from \"@swapkit/plugin-chainflip\";\nimport { EVMPlugin } from \"@swapkit/plugin-evm\";\nimport { MayachainPlugin, ThorchainPlugin } from \"@swapkit/plugin-thorchain\";\nimport { wallets as defaultWallets } from \"@swapkit/wallets\";\n\nexport * from \"@swapkit/core\";\nexport * from \"@swapkit/tokens\";\n\nconst defaultPlugins = {\n  ...ChainflipPlugin,\n  ...EVMPlugin,\n  ...MayachainPlugin,\n  ...ThorchainPlugin,\n};\n\nexport const createSwapKit = <P extends typeof defaultPlugins, W extends typeof defaultWallets>({\n  plugins,\n  wallets,\n  ...extendParams\n}: SwapKitParams<P, W> = {}) => {\n  return SwapKit({\n    ...extendParams,\n    wallets: wallets || defaultWallets,\n    plugins: plugins || defaultPlugins,\n  });\n};\n\nexport { SwapKitApi } from \"@swapkit/api\";\n"
+  ],
+  "mappings": "AAAA,kBAAS,sBACT,0BAAS,kCACT,oBAAS,4BACT,0BAAS,qBAAiB,kCAC1B,kBAAS,yBAET,2BACA,6BAqBA,qBAAS,qBAnBT,IAAM,EAAiB,IAClB,KACA,KACA,KACA,CACL,EAEa,EAAgB,EAC3B,UACA,aACG,GACoB,CAAC,IAAM,CAC9B,OAAO,EAAQ,IACV,EACH,QAAS,GAAW,EACpB,QAAS,GAAW,CACtB,CAAC",
+  "debugId": "D4A33A474BC9A81864756E2164756E21",
+  "names": []
+}
