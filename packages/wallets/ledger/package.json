@@ -11,10 +11,10 @@
     "@ledgerhq/hw-transport": "6.31.0",
     "@ledgerhq/hw-transport-webusb": "6.29.0",
     "@scure/base": "1.1.7",
-    "@swapkit/helpers": "workspace:*",
-    "@swapkit/toolbox-cosmos": "workspace:*",
-    "@swapkit/toolbox-evm": "workspace:*",
-    "@swapkit/toolbox-utxo": "workspace:*",
+    "@stormcloud266/helpers": "workspace:*",
+    "@stormcloud266/toolbox-cosmos": "workspace:*",
+    "@stormcloud266/toolbox-evm": "workspace:*",
+    "@stormcloud266/toolbox-utxo": "workspace:*",
     "@types/ripemd160": "2.0.3",
     "cosmjs-types": "0.9.0",
     "ripemd160": "2.0.2"
@@ -27,7 +27,7 @@
   "homepage": "https://github.com/thorswap/SwapKit",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@swapkit/wallet-ledger",
+  "name": "@stormcloud266/wallet-ledger",
   "react-native": "./src/index.ts",
   "repository": {
     "type": "git",

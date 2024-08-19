@@ -1,9 +1,9 @@
 {
   "author": "swapkit-oss",
   "dependencies": {
-    "@swapkit/api": "workspace:*",
-    "@swapkit/helpers": "workspace:*",
-    "@swapkit/toolbox-evm": "workspace:*"
+    "@stormcloud266/api": "workspace:*",
+    "@stormcloud266/helpers": "workspace:*",
+    "@stormcloud266/toolbox-evm": "workspace:*"
   },
   "description": "SwapKit Plugin - EVM",
   "files": [
@@ -13,7 +13,7 @@
   "homepage": "https://github.com/thorswap/SwapKit",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@swapkit/plugin-evm",
+  "name": "@stormcloud266/plugin-evm",
   "react-native": "./src/index.ts",
   "repository": {
     "type": "git",

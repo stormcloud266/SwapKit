@@ -1,4 +1,4 @@
-import type { QuoteRoute } from "@swapkit/api";
+import type { QuoteRoute } from "@stormcloud266/api";
 import type {
   AssetValue,
   CosmosWallets,
@@ -7,7 +7,7 @@ import type {
   MemoType,
   ThorchainWallets,
   UTXOWallets,
-} from "@swapkit/helpers";
+} from "@stormcloud266/helpers";
 
 export type SupportedChain = keyof (EVMWallets & UTXOWallets & ThorchainWallets & CosmosWallets);
 

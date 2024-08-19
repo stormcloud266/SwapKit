@@ -1,4 +1,4 @@
-import type { QuoteResponseRoute } from "@swapkit/api";
+import type { QuoteResponseRoute } from "@stormcloud266/api";
 
 import {
   ApproveMode,
@@ -19,15 +19,18 @@ import {
   type SwapKitWallet,
   type SwapParams,
   type WalletChain,
-} from "@swapkit/helpers";
+} from "@stormcloud266/helpers";
 import {
   type TransferParams as CosmosTransferParams,
   estimateTransactionFee as cosmosTransactionFee,
   cosmosValidateAddress,
-} from "@swapkit/toolbox-cosmos";
-import { type TransferParams as EVMTransferParams, evmValidateAddress } from "@swapkit/toolbox-evm";
-import { substrateValidateAddress } from "@swapkit/toolbox-substrate";
-import { type UTXOTransferParams, utxoValidateAddress } from "@swapkit/toolbox-utxo";
+} from "@stormcloud266/toolbox-cosmos";
+import {
+  type TransferParams as EVMTransferParams,
+  evmValidateAddress,
+} from "@stormcloud266/toolbox-evm";
+import { substrateValidateAddress } from "@stormcloud266/toolbox-substrate";
+import { type UTXOTransferParams, utxoValidateAddress } from "@stormcloud266/toolbox-utxo";
 
 import {
   getExplorerAddressUrl as getAddressUrl,
@@ -310,7 +313,7 @@ export function SwapKit<
   }: { chain: Chain; signature: string; message: string; address: string }) {
     switch (chain) {
       case Chain.THORChain: {
-        const { getToolboxByChain } = await import("@swapkit/toolbox-cosmos");
+        const { getToolboxByChain } = await import("@stormcloud266/toolbox-cosmos");
         const toolbox = getToolboxByChain(chain);
         return toolbox().verifySignature({ signature, message, address });
       }

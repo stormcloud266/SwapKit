@@ -19,7 +19,7 @@
     "size-limit": "11.1.4",
     "typescript": "5.5.4"
   },
-  "name": "swapkit-monorepo",
+  "name": "stormcloud266-swapkit-monorepo",
   "packageManager": "^bun@1.1.17",
   "private": true,
   "scripts": {
@@ -27,7 +27,7 @@
     "build": "bun --filter '*' build",
     "clean": "bun --filter '*' clean && rm -rf node_modules; bun install",
     "deps": "bun ncu --root -u -i -ws",
-    "generate:tokens": "bun --filter '@swapkit/api' build; bun --cwd packages/swapkit/tokens generate-tokens; bun --filter '@swapkit/tokens' lint",
+    "generate:tokens": "bun --filter '@stormcloud266/api' build; bun --cwd packages/swapkit/tokens generate-tokens; bun --filter '@stormcloud266/tokens' lint",
     "lint": "bun --filter '*' lint",
     "lint:ci": "bun lint && bun type-check",
     "lint:ws": "bun x sherif@latest",

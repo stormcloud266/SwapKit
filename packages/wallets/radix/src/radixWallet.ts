@@ -5,8 +5,8 @@ import {
   RPCUrl,
   WalletOption,
   setRequestClientConfig,
-} from "@swapkit/helpers";
-import { RadixMainnet, type RadixSigner } from "@swapkit/toolbox-radix";
+} from "@stormcloud266/helpers";
+import { RadixMainnet, type RadixSigner } from "@stormcloud266/toolbox-radix";
 
 // TODO figure out way to make wallet work nicely with toolbox without reimplementing all the methods
 const RadixSignerInstance = (): RadixSigner & { getAddress: () => Promise<string> } => {
@@ -58,7 +58,7 @@ const RadixSignerInstance = (): RadixSigner & { getAddress: () => Promise<string
 
 const getWalletMethods = async () => {
   const { getRadixCoreApiClient, RadixToolbox, RadixMainnet } = await import(
-    "@swapkit/toolbox-radix"
+    "@stormcloud266/toolbox-radix"
   );
 
   const api = await getRadixCoreApiClient(RPCUrl.Radix, RadixMainnet);

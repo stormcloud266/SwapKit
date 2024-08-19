@@ -1,4 +1,4 @@
-export * from "@swapkit/contracts";
+export * from "@stormcloud266/contracts";
 export * from "./types/index.ts";
 
 /**

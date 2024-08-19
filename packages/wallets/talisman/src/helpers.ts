@@ -9,7 +9,7 @@ import {
   addEVMWalletNetwork,
   ensureEVMApiKeys,
   prepareNetworkSwitch,
-} from "@swapkit/helpers";
+} from "@stormcloud266/helpers";
 import {
   type ARBToolbox,
   type BSCToolbox,
@@ -17,9 +17,9 @@ import {
   type Eip1193Provider,
   type MATICToolbox,
   type OPToolbox,
-} from "@swapkit/toolbox-evm";
+} from "@stormcloud266/toolbox-evm";
 
-import type { InjectedWindow } from "@swapkit/toolbox-substrate";
+import type { InjectedWindow } from "@stormcloud266/toolbox-substrate";
 
 declare const window: {
   talismanEth: EthereumWindowProvider;
@@ -43,7 +43,7 @@ export const getWeb3WalletMethods = async ({
   covalentApiKey?: string;
   ethplorerApiKey?: string;
 }) => {
-  const { getToolboxByChain } = await import("@swapkit/toolbox-evm");
+  const { getToolboxByChain } = await import("@stormcloud266/toolbox-evm");
 
   if (!ethereumWindowProvider) {
     throw new SwapKitError({
@@ -103,7 +103,7 @@ export const getWalletForChain = async ({
         throw new SwapKitError({ errorKey: "wallet_talisman_not_found", info: { chain } });
       }
 
-      const { getProvider } = await import("@swapkit/toolbox-evm");
+      const { getProvider } = await import("@stormcloud266/toolbox-evm");
 
       const evmWallet = await getWeb3WalletMethods({
         chain,
@@ -121,7 +121,7 @@ export const getWalletForChain = async ({
     }
 
     case Chain.Polkadot: {
-      const { getToolboxByChain } = await import("@swapkit/toolbox-substrate");
+      const { getToolboxByChain } = await import("@stormcloud266/toolbox-substrate");
 
       const injectedWindow = window as Window & InjectedWindow;
       const injectedExtension = injectedWindow?.injectedWeb3?.talisman;

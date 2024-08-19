@@ -16,7 +16,7 @@ import crypto from "crypto";
  *  limitations under the License.
  ******************************************************************************* */
 import { bech32 } from "@scure/base";
-import { LedgerErrorCode } from "@swapkit/helpers";
+import { LedgerErrorCode } from "@stormcloud266/helpers";
 import Ripemd160 from "ripemd160";
 
 import {

@@ -1,5 +1,5 @@
-import type { AssetValue, Chain } from "@swapkit/core";
-import { ThorchainToolbox, buildAminoMsg } from "@swapkit/toolbox-cosmos";
+import type { AssetValue, Chain } from "@stormcloud266/core";
+import { ThorchainToolbox, buildAminoMsg } from "@stormcloud266/toolbox-cosmos";
 import { fromByteArray } from "base64-js";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { SwapKitClient } from "../swapKitClient";

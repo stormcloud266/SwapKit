@@ -3,7 +3,7 @@ import {
   type ConnectWalletParams,
   WalletOption,
   setRequestClientConfig,
-} from "@swapkit/helpers";
+} from "@stormcloud266/helpers";
 
 import { getWalletForChain } from "./helpers.ts";
 

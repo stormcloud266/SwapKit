@@ -1,4 +1,4 @@
-import type { AssetValue, WalletChain } from "@swapkit/core";
+import type { AssetValue, WalletChain } from "@stormcloud266/core";
 import { useCallback, useState } from "react";
 import type { SwapKitClient } from "../swapKitClient";
 

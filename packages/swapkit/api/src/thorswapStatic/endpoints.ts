@@ -1,4 +1,9 @@
-import { AssetValue, type ProviderName, RequestClient, getChainIdentifier } from "@swapkit/helpers";
+import {
+  AssetValue,
+  type ProviderName,
+  RequestClient,
+  getChainIdentifier,
+} from "@stormcloud266/helpers";
 
 import { getTokenListProvidersV2 } from "../thorswapApiV2/endpoints.ts";
 import type { TokenListProvidersResponse } from "../thorswapApiV2/types.ts";

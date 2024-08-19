@@ -4,14 +4,14 @@ import {
   type DerivationPathArray,
   NetworkDerivationPath,
   derivationPathToString,
-} from "@swapkit/helpers";
+} from "@stormcloud266/helpers";
 import {
   AbstractSigner,
   type Provider,
   Signature,
   Transaction,
   type TransactionRequest,
-} from "@swapkit/toolbox-evm";
+} from "@stormcloud266/toolbox-evm";
 
 import { getLedgerTransport } from "../helpers/getLedgerTransport.ts";
 

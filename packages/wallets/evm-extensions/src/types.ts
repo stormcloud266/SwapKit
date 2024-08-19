@@ -1,4 +1,4 @@
-import type { Eip1193Provider } from "@swapkit/toolbox-evm";
+import type { Eip1193Provider } from "@stormcloud266/toolbox-evm";
 
 export interface EIP6963ProviderInfo {
   walletId: string;

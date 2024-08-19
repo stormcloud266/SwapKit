@@ -1,6 +1,6 @@
 import { getSwapKitClient } from "./client";
 <%_ if (config.enableTokens) { _%>
-import { AssetValue } from "@swapkit/<%= config.clientType === 'sdk' ? 'sdk' : 'core' %>";
+import { AssetValue } from "@stormcloud266/<%= config.clientType === 'sdk' ? 'sdk' : 'core' %>";
 
 AssetValue.loadStaticAssets()
 <%_ } _%>

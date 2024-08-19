@@ -1,4 +1,4 @@
-import { createSwapKit } from "@swapkit/sdk";
+import { createSwapKit } from "@stormcloud266/sdk";
 
 export type SwapKitClient = ReturnType<typeof createSwapKit>;
 

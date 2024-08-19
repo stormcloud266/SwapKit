@@ -1,5 +1,5 @@
 "use client";
-import type { AssetValue } from "@swapkit/sdk";
+import type { AssetValue } from "@stormcloud266/sdk";
 import { useCallback, useState } from "react";
 import type { SwapKitClient } from "../swapKitClient";
 

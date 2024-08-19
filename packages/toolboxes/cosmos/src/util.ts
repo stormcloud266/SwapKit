@@ -12,7 +12,7 @@ import {
   FeeOption,
   RPCUrl,
   defaultRequestHeaders,
-} from "@swapkit/helpers";
+} from "@stormcloud266/helpers";
 
 import type { CosmosMaxSendableAmountParams } from "./types.ts";
 

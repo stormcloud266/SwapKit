@@ -1,7 +1,7 @@
 {
   "author": "swapkit-oss",
   "dependencies": {
-    "@swapkit/helpers": "workspace:*",
+    "@stormcloud266/helpers": "workspace:*",
     "zod": "3.23.8"
   },
   "devDependencies": {
@@ -15,7 +15,7 @@
   "homepage": "https://github.com/thorswap/SwapKit",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@swapkit/api",
+  "name": "@stormcloud266/api",
   "react-native": "./src/index.ts",
   "repository": {
     "type": "git",

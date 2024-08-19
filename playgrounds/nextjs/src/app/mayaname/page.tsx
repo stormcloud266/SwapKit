@@ -1,6 +1,6 @@
 "use client";
 
-import { AssetValue, Chain, getMAYANameCost } from "@swapkit/helpers";
+import { AssetValue, Chain, getMAYANameCost } from "@stormcloud266/helpers";
 import { Button } from "~/components/ui/button.tsx";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "~/components/ui/card";
 import { useSwapKit } from "~/lib/swapKit.ts";

@@ -1,9 +1,9 @@
-import type { QuoteRoute } from "@swapkit/api";
+import type { QuoteRoute } from "@stormcloud266/api";
 import {
   type AGG_CONTRACT_ADDRESS,
   SwapKitError,
   lowercasedGenericAbiMappings,
-} from "@swapkit/helpers";
+} from "@stormcloud266/helpers";
 
 type SwapInParams = {
   calldata: QuoteRoute["calldata"];

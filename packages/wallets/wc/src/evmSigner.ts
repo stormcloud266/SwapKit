@@ -1,6 +1,6 @@
-import { type EVMChain, SwapKitError, WalletOption } from "@swapkit/helpers";
-import type { JsonRpcProvider, Provider, TransactionRequest } from "@swapkit/toolbox-evm";
-import { AbstractSigner } from "@swapkit/toolbox-evm";
+import { type EVMChain, SwapKitError, WalletOption } from "@stormcloud266/helpers";
+import type { JsonRpcProvider, Provider, TransactionRequest } from "@stormcloud266/toolbox-evm";
+import { AbstractSigner } from "@stormcloud266/toolbox-evm";
 
 import { DEFAULT_EIP155_METHODS } from "./constants.ts";
 import { chainToChainId, getAddressByChain } from "./helpers.ts";
@@ -79,7 +79,7 @@ class WalletconnectSigner extends AbstractSigner {
   signTypedData = () => {
     throw new Error("Not implemented: signTypedData");
 
-    // const { toHexString } = await import('@swapkit/toolbox-evm');
+    // const { toHexString } = await import('@stormcloud266/toolbox-evm');
 
     // const baseTx = {
     //   from,
@@ -102,7 +102,7 @@ class WalletconnectSigner extends AbstractSigner {
 
   // @ts-expect-error TODO: fix this
   sendTransaction = async ({ from, to, value, data }: TransactionRequest) => {
-    const { toHexString } = await import("@swapkit/toolbox-evm");
+    const { toHexString } = await import("@stormcloud266/toolbox-evm");
 
     const baseTx = {
       from,

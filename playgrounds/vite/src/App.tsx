@@ -1,7 +1,7 @@
-import { AssetValue, type Chain, type FullWallet } from "@swapkit/core";
+import { AssetValue, type Chain, type FullWallet } from "@stormcloud266/core";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
-import { WalletWidget } from "@swapkit/wallet-exodus";
+import { WalletWidget } from "@stormcloud266/wallet-exodus";
 import Liquidity from "./Liquidity";
 import Loan from "./Loan";
 import Multisig from "./Multisig";

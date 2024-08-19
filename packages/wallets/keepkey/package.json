@@ -2,10 +2,10 @@
   "dependencies": {
     "@cosmjs/amino": "0.32.4",
     "@keepkey/keepkey-sdk": "0.2.57",
-    "@swapkit/helpers": "workspace:*",
-    "@swapkit/toolbox-cosmos": "workspace:*",
-    "@swapkit/toolbox-evm": "workspace:*",
-    "@swapkit/toolbox-utxo": "workspace:*"
+    "@stormcloud266/helpers": "workspace:*",
+    "@stormcloud266/toolbox-cosmos": "workspace:*",
+    "@stormcloud266/toolbox-evm": "workspace:*",
+    "@stormcloud266/toolbox-utxo": "workspace:*"
   },
   "description": "SwapKit Wallet - KeepKey",
   "files": [
@@ -15,7 +15,7 @@
   "homepage": "https://github.com/thorswap/SwapKit",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@swapkit/wallet-keepkey",
+  "name": "@stormcloud266/wallet-keepkey",
   "publishConfig": {
     "access": "public"
   },
