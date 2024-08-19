@@ -2,9 +2,9 @@
   "dependencies": {
     "@cosmjs/amino": "0.32.4",
     "@cosmjs/proto-signing": "0.32.4",
-    "@swapkit/helpers": "workspace:*",
-    "@swapkit/toolbox-cosmos": "workspace:*",
-    "@swapkit/toolbox-evm": "workspace:*",
+    "@stormcloud266/helpers": "workspace:*",
+    "@stormcloud266/toolbox-cosmos": "workspace:*",
+    "@stormcloud266/toolbox-evm": "workspace:*",
     "@walletconnect/modal-sign-html": "2.6.2",
     "pino": "9.2.0",
     "pino-pretty": "11.2.1",
@@ -22,7 +22,7 @@
   "homepage": "https://github.com/thorswap/SwapKit",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@swapkit/wallet-wc",
+  "name": "@stormcloud266/wallet-wc",
   "react-native": "./src/index.ts",
   "repository": {
     "type": "git",

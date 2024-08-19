@@ -5,9 +5,9 @@ import {
   SwapKitError,
   derivationPathToString,
   getWalletFormatFor,
-} from "@swapkit/helpers";
-import type { Psbt, UTXOType } from "@swapkit/toolbox-utxo";
-import { Transaction, toCashAddress } from "@swapkit/toolbox-utxo";
+} from "@stormcloud266/helpers";
+import type { Psbt, UTXOType } from "@stormcloud266/toolbox-utxo";
+import { Transaction, toCashAddress } from "@stormcloud266/toolbox-utxo";
 
 import { getLedgerTransport } from "../helpers/getLedgerTransport.ts";
 

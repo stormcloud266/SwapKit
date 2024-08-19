@@ -1,8 +1,8 @@
-import type { CosmosWallets, ThorchainWallets } from "@swapkit/toolbox-cosmos";
-import type { EVMWallets } from "@swapkit/toolbox-evm";
-import type { SolanaWallet } from "@swapkit/toolbox-solana";
-import type { SubstrateWallets } from "@swapkit/toolbox-substrate";
-import type { UTXOWallets } from "@swapkit/toolbox-utxo";
+import type { CosmosWallets, ThorchainWallets } from "@stormcloud266/toolbox-cosmos";
+import type { EVMWallets } from "@stormcloud266/toolbox-evm";
+import type { SolanaWallet } from "@stormcloud266/toolbox-solana";
+import type { SubstrateWallets } from "@stormcloud266/toolbox-substrate";
+import type { UTXOWallets } from "@stormcloud266/toolbox-utxo";
 import type { Eip1193Provider } from "ethers";
 
 import type { AssetValue } from "../modules/assetValue";

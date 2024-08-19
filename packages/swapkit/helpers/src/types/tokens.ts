@@ -10,7 +10,7 @@ import type {
   TraderjoeV2List,
   UniswapV2List,
   UniswapV3List,
-} from "@swapkit/tokens";
+} from "@stormcloud266/tokens";
 
 export type TokenTax = { buy: number; sell: number };
 

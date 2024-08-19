@@ -1,19 +1,19 @@
 {
   "description": "SwapKit - Wallets",
   "dependencies": {
-    "@swapkit/wallet-coinbase": "workspace:*",
-    "@swapkit/wallet-evm-extensions": "workspace:*",
-    "@swapkit/wallet-keepkey": "workspace:*",
-    "@swapkit/wallet-keplr": "workspace:*",
-    "@swapkit/wallet-keystore": "workspace:*",
-    "@swapkit/wallet-ledger": "workspace:*",
-    "@swapkit/wallet-okx": "workspace:*",
-    "@swapkit/wallet-polkadotjs": "workspace:*",
-    "@swapkit/wallet-phantom": "workspace:*",
-    "@swapkit/wallet-talisman": "workspace:*",
-    "@swapkit/wallet-trezor": "workspace:*",
-    "@swapkit/wallet-wc": "workspace:*",
-    "@swapkit/wallet-xdefi": "workspace:*"
+    "@stormcloud266/wallet-coinbase": "workspace:*",
+    "@stormcloud266/wallet-evm-extensions": "workspace:*",
+    "@stormcloud266/wallet-keepkey": "workspace:*",
+    "@stormcloud266/wallet-keplr": "workspace:*",
+    "@stormcloud266/wallet-keystore": "workspace:*",
+    "@stormcloud266/wallet-ledger": "workspace:*",
+    "@stormcloud266/wallet-okx": "workspace:*",
+    "@stormcloud266/wallet-polkadotjs": "workspace:*",
+    "@stormcloud266/wallet-phantom": "workspace:*",
+    "@stormcloud266/wallet-talisman": "workspace:*",
+    "@stormcloud266/wallet-trezor": "workspace:*",
+    "@stormcloud266/wallet-wc": "workspace:*",
+    "@stormcloud266/wallet-xdefi": "workspace:*"
   },
   "files": [
     "src/",
@@ -22,7 +22,7 @@
   "homepage": "https://github.com/thorswap/SwapKit",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@swapkit/wallets",
+  "name": "@stormcloud266/wallets",
   "react-native": "./src/index.ts",
   "repository": {
     "type": "git",

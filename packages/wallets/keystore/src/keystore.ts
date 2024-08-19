@@ -12,14 +12,14 @@ import {
   derivationPathToString,
   ensureEVMApiKeys,
   setRequestClientConfig,
-} from "@swapkit/helpers";
-import type { DepositParam, TransferParams } from "@swapkit/toolbox-cosmos";
+} from "@stormcloud266/helpers";
+import type { DepositParam, TransferParams } from "@stormcloud266/toolbox-cosmos";
 import type {
   Psbt,
   TransactionType,
   UTXOTransferParams,
   UTXOWalletTransferParams,
-} from "@swapkit/toolbox-utxo";
+} from "@stormcloud266/toolbox-utxo";
 
 type KeystoreOptions = {
   ethplorerApiKey?: string;
@@ -55,7 +55,9 @@ const getWalletMethodsForChain = async ({
     case Chain.Ethereum:
     case Chain.Optimism:
     case Chain.Polygon: {
-      const { HDNodeWallet, getProvider, getToolboxByChain } = await import("@swapkit/toolbox-evm");
+      const { HDNodeWallet, getProvider, getToolboxByChain } = await import(
+        "@stormcloud266/toolbox-evm"
+      );
 
       const keys = ensureEVMApiKeys({ chain, covalentApiKey, ethplorerApiKey });
       const provider = getProvider(chain, rpcUrl);
@@ -66,7 +68,7 @@ const getWalletMethodsForChain = async ({
     }
 
     case Chain.BitcoinCash: {
-      const { BCHToolbox } = await import("@swapkit/toolbox-utxo");
+      const { BCHToolbox } = await import("@stormcloud266/toolbox-utxo");
       const toolbox = BCHToolbox({ rpcUrl, apiKey: blockchairApiKey, apiClient: api });
       const keys = await toolbox.createKeysForPath({ phrase, derivationPath });
       const address = toolbox.getAddressFromKeys(keys);
@@ -96,7 +98,7 @@ const getWalletMethodsForChain = async ({
     case Chain.Dash:
     case Chain.Dogecoin:
     case Chain.Litecoin: {
-      const { getToolboxByChain } = await import("@swapkit/toolbox-utxo");
+      const { getToolboxByChain } = await import("@stormcloud266/toolbox-utxo");
 
       const toolbox = getToolboxByChain(chain)({
         rpcUrl,
@@ -123,7 +125,7 @@ const getWalletMethodsForChain = async ({
 
     case Chain.Cosmos:
     case Chain.Kujira: {
-      const { getToolboxByChain } = await import("@swapkit/toolbox-cosmos");
+      const { getToolboxByChain } = await import("@stormcloud266/toolbox-cosmos");
       const toolbox = getToolboxByChain(chain)({ server: api, stagenet });
       const address = await toolbox.getAddressFromMnemonic(phrase);
       const signer = await toolbox.getSigner(phrase);
@@ -135,7 +137,7 @@ const getWalletMethodsForChain = async ({
 
     case Chain.Maya:
     case Chain.THORChain: {
-      const { getToolboxByChain } = await import("@swapkit/toolbox-cosmos");
+      const { getToolboxByChain } = await import("@stormcloud266/toolbox-cosmos");
 
       const toolbox = getToolboxByChain(chain)({ server: api, stagenet });
       const signer = await toolbox.getSigner(phrase);
@@ -160,7 +162,7 @@ const getWalletMethodsForChain = async ({
     case Chain.Polkadot:
     case Chain.Chainflip: {
       const { Network, getToolboxByChain, createKeyring } = await import(
-        "@swapkit/toolbox-substrate"
+        "@stormcloud266/toolbox-substrate"
       );
 
       const signer = await createKeyring(phrase, Network[chain].prefix);
@@ -171,7 +173,7 @@ const getWalletMethodsForChain = async ({
 
     case Chain.Radix: {
       const { getRadixCoreApiClient, RadixToolbox, createPrivateKey, RadixMainnet } = await import(
-        "@swapkit/toolbox-radix"
+        "@stormcloud266/toolbox-radix"
       );
 
       const api = await getRadixCoreApiClient(RPCUrl.Radix, RadixMainnet);
@@ -182,7 +184,7 @@ const getWalletMethodsForChain = async ({
     }
 
     case Chain.Solana: {
-      const { SOLToolbox } = await import("@swapkit/toolbox-solana");
+      const { SOLToolbox } = await import("@stormcloud266/toolbox-solana");
       const toolbox = SOLToolbox({ rpcUrl });
       const keypair = toolbox.createKeysForPath({ phrase, derivationPath });
 

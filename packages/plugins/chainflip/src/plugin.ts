@@ -6,7 +6,7 @@ import {
   SwapKitError,
   type SwapKitPluginParams,
   type UTXOWallets,
-} from "@swapkit/helpers";
+} from "@stormcloud266/helpers";
 
 import type { RequestSwapDepositAddressParams } from "./types.ts";
 
@@ -102,6 +102,6 @@ function plugin({
 export const ChainflipPlugin = { chainflip: { plugin } } as const;
 
 /**
- * @deprecated Use import { ChainflipPlugin } from "@swapkit/plugin-chainflip" instead
+ * @deprecated Use import { ChainflipPlugin } from "@stormcloud266/plugin-chainflip" instead
  */
 export const ChainflipProvider = ChainflipPlugin;

@@ -1,4 +1,4 @@
-import { Chain } from "@swapkit/helpers";
+import { Chain } from "@stormcloud266/helpers";
 
 import { GaiaToolbox } from "./gaia.ts";
 import { KujiraToolbox } from "./kujira.ts";

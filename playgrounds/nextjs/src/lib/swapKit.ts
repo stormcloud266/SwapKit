@@ -1,4 +1,4 @@
-import { type AssetValue, type Chain, WalletOption } from "@swapkit/helpers";
+import { type AssetValue, type Chain, WalletOption } from "@stormcloud266/helpers";
 
 import { atom, useAtom } from "jotai";
 import { useCallback, useEffect } from "react";
@@ -17,10 +17,10 @@ export const useSwapKit = () => {
 
   useEffect(() => {
     const loadSwapKit = async () => {
-      const { SwapKit } = await import("@swapkit/core");
-      const { ChainflipPlugin } = await import("@swapkit/plugin-chainflip");
-      const { ThorchainPlugin, MayachainPlugin } = await import("@swapkit/plugin-thorchain");
-      const { wallets } = await import("@swapkit/wallets");
+      const { SwapKit } = await import("@stormcloud266/core");
+      const { ChainflipPlugin } = await import("@stormcloud266/plugin-chainflip");
+      const { ThorchainPlugin, MayachainPlugin } = await import("@stormcloud266/plugin-thorchain");
+      const { wallets } = await import("@stormcloud266/wallets");
 
       const swapKitClient = SwapKit({
         config: {

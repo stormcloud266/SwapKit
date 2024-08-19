@@ -1,4 +1,4 @@
-import { Chain, type FeeOption } from "@swapkit/helpers";
+import { Chain, type FeeOption } from "@stormcloud266/helpers";
 import type { BrowserProvider, JsonRpcProvider, JsonRpcSigner, Signer } from "ethers";
 
 import type { EthplorerApiType } from "../api/ethplorerApi.ts";

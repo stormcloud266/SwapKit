@@ -3,8 +3,8 @@
   "dependencies": {
     "@radixdlt/radix-dapp-toolkit": "2.0.1",
     "@radixdlt/wallet-sdk": "1.0.1",
-    "@swapkit/toolbox-radix": "workspace:*",
-    "@swapkit/helpers": "workspace:*"
+    "@stormcloud266/toolbox-radix": "workspace:*",
+    "@stormcloud266/helpers": "workspace:*"
   },
   "description": "SwapKit Lib ",
   "files": [
@@ -14,7 +14,7 @@
   "homepage": "https://github.com/thorswap/SwapKit",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@swapkit/wallet-radix",
+  "name": "@stormcloud266/wallet-radix",
   "react-native": "./src/index.ts",
   "repository": {
     "type": "git",

@@ -13,7 +13,7 @@ import {
   type SubstrateChain,
   SwapKitError,
   SwapKitNumber,
-} from "@swapkit/helpers";
+} from "@stormcloud266/helpers";
 
 import { Network, type SubstrateNetwork } from "../types/network.ts";
 

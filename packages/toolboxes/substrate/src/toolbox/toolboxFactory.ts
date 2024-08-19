@@ -1,6 +1,12 @@
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import type { KeyringPair } from "@polkadot/keyring/types";
-import { AssetValue, Chain, RPCUrl, type SubstrateChain, SwapKitNumber } from "@swapkit/helpers";
+import {
+  AssetValue,
+  Chain,
+  RPCUrl,
+  type SubstrateChain,
+  SwapKitNumber,
+} from "@stormcloud266/helpers";
 
 import { Network } from "../types/network.ts";
 

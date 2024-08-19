@@ -1,4 +1,4 @@
-import { RequestClient } from "@swapkit/helpers";
+import { RequestClient } from "@stormcloud266/helpers";
 
 import {
   ApiV1ErrorSchema,

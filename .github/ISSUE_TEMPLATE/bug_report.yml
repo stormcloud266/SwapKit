@@ -55,25 +55,25 @@ body:
       description: |
         Which packages are affected by the issue?
       options:
-        - label: "@swapkit/sdk"
-        - label: "@swapkit/core"
-        - label: "@swapkit/api"
-        - label: "@swapkit/helpers"
-        - label: "@swapkit/tokens"
+        - label: "@stormcloud266/sdk"
+        - label: "@stormcloud266/core"
+        - label: "@stormcloud266/api"
+        - label: "@stormcloud266/helpers"
+        - label: "@stormcloud266/tokens"
 
-        - label: "@swapkit/toolbox-cosmos"
-        - label: "@swapkit/toolbox-evm"
-        - label: "@swapkit/toolbox-utxo"
+        - label: "@stormcloud266/toolbox-cosmos"
+        - label: "@stormcloud266/toolbox-evm"
+        - label: "@stormcloud266/toolbox-utxo"
 
-        - label: "@swapkit/wallet-evm-extensions"
-        - label: "@swapkit/wallet-keepkey"
-        - label: "@swapkit/wallet-keplr"
-        - label: "@swapkit/wallet-keystore"
-        - label: "@swapkit/wallet-ledger"
-        - label: "@swapkit/wallet-okx"
-        - label: "@swapkit/wallet-trezor"
-        - label: "@swapkit/wallet-wc"
-        - label: "@swapkit/wallet-xdefi"
+        - label: "@stormcloud266/wallet-evm-extensions"
+        - label: "@stormcloud266/wallet-keepkey"
+        - label: "@stormcloud266/wallet-keplr"
+        - label: "@stormcloud266/wallet-keystore"
+        - label: "@stormcloud266/wallet-ledger"
+        - label: "@stormcloud266/wallet-okx"
+        - label: "@stormcloud266/wallet-trezor"
+        - label: "@stormcloud266/wallet-wc"
+        - label: "@stormcloud266/wallet-xdefi"
 
   - type: textarea
     attributes:
@@ -83,7 +83,7 @@ body:
       value: |
         Package versions:
         ```bash
-        # Paste the output of `<npm|yarn|pnpm|bun pm> ls --depth=0 | grep @swapkit` here
+        # Paste the output of `<npm|yarn|pnpm|bun pm> ls --depth=0 | grep @stormcloud266` here
         ```
     validations:
       required: true

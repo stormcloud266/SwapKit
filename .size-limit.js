@@ -27,7 +27,7 @@ function getSizeFor(packagePath, sizeType) {
     {
       limit: size,
       path: `./packages/${packagePath}/dist/*.js`,
-      name: `@swapkit/${packagePrefix}${packageName}`,
+      name: `@stormcloud266/${packagePrefix}${packageName}`,
     },
   ];
 }

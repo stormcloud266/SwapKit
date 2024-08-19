@@ -1,5 +1,5 @@
 "use client";
-import { type AssetValue, FeeOption, type QuoteResponseRoute } from "@swapkit/sdk";
+import { type AssetValue, FeeOption, type QuoteResponseRoute } from "@stormcloud266/sdk";
 import { useCallback } from "react";
 
 import type { SwapKitClient } from "../swapKitClient";

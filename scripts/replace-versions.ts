@@ -25,7 +25,7 @@ for (const file of onlyPackageJson) {
   const { version } = await import(`../packages/${file}`);
   const [type, name] = file.split("/");
 
-  const packageName = `@swapkit/${getPackagePrefix(type)}${name}`;
+  const packageName = `@stormcloud266/${getPackagePrefix(type)}${name}`;
 
   versions[packageName] = version;
 }
@@ -35,7 +35,7 @@ for (const file of onlyPackageJson) {
   const content = await packageJson.text();
 
   const replacedContent = content.replace(
-    /"(@swapkit\/[^"]+)": "[^"]+"/g,
+    /"(@stormcloud266\/[^"]+)": "[^"]+"/g,
     (_, p1) => `"${p1}": "${versions[p1]}"`,
   );
 

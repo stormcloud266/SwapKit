@@ -9,13 +9,13 @@ import {
   ensureEVMApiKeys,
   prepareNetworkSwitch,
   setRequestClientConfig,
-} from "@swapkit/helpers";
+} from "@stormcloud266/helpers";
 import {
   type AVAXToolbox,
   type BrowserProvider,
   type Eip1193Provider,
   getToolboxByChain,
-} from "@swapkit/toolbox-evm";
+} from "@stormcloud266/toolbox-evm";
 
 declare const window: {
   ethereum: EthereumWindowProvider;
@@ -101,7 +101,7 @@ function connectEVMWallet({
     setRequestClientConfig({ apiKey: thorswapApiKey });
 
     const promises = chains.map(async (chain) => {
-      const { BrowserProvider, getProvider } = await import("@swapkit/toolbox-evm");
+      const { BrowserProvider, getProvider } = await import("@stormcloud266/toolbox-evm");
 
       if (walletType === WalletOption.EIP6963) {
         if (!eip1193Provider) throw new Error("Missing provider");

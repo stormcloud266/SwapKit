@@ -8,8 +8,12 @@ import {
   WalletOption,
   ensureEVMApiKeys,
   setRequestClientConfig,
-} from "@swapkit/helpers";
-import type { BaseCosmosToolboxType, DepositParam, TransferParams } from "@swapkit/toolbox-cosmos";
+} from "@stormcloud266/helpers";
+import type {
+  BaseCosmosToolboxType,
+  DepositParam,
+  TransferParams,
+} from "@stormcloud266/toolbox-cosmos";
 import type { WalletConnectModalSign } from "@walletconnect/modal-sign-html";
 import type { SessionTypes, SignClientTypes } from "@walletconnect/types";
 
@@ -62,7 +66,7 @@ async function getToolbox({
     case Chain.Ethereum:
     case Chain.Optimism:
     case Chain.Polygon: {
-      const { getProvider, getToolboxByChain } = await import("@swapkit/toolbox-evm");
+      const { getProvider, getToolboxByChain } = await import("@stormcloud266/toolbox-evm");
 
       const keys = ensureEVMApiKeys({ chain, ethplorerApiKey, covalentApiKey });
       const provider = getProvider(chain);
@@ -86,7 +90,7 @@ async function getToolbox({
         fromBase64,
         getDefaultChainFee,
         prepareMessageForBroadcast,
-      } = await import("@swapkit/toolbox-cosmos");
+      } = await import("@stormcloud266/toolbox-cosmos");
       const toolbox = ThorchainToolbox({ stagenet: false });
 
       const fee = getDefaultChainFee(chain);

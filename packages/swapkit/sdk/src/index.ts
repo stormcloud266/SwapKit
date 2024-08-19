@@ -1,11 +1,11 @@
-import { SwapKit, type SwapKitParams } from "@swapkit/core";
-import { ChainflipPlugin } from "@swapkit/plugin-chainflip";
-import { EVMPlugin } from "@swapkit/plugin-evm";
-import { MayachainPlugin, ThorchainPlugin } from "@swapkit/plugin-thorchain";
-import { wallets as defaultWallets } from "@swapkit/wallets";
+import { SwapKit, type SwapKitParams } from "@stormcloud266/core";
+import { ChainflipPlugin } from "@stormcloud266/plugin-chainflip";
+import { EVMPlugin } from "@stormcloud266/plugin-evm";
+import { MayachainPlugin, ThorchainPlugin } from "@stormcloud266/plugin-thorchain";
+import { wallets as defaultWallets } from "@stormcloud266/wallets";
 
-export * from "@swapkit/core";
-export * from "@swapkit/tokens";
+export * from "@stormcloud266/core";
+export * from "@stormcloud266/tokens";
 
 const defaultPlugins = {
   ...ChainflipPlugin,
@@ -26,4 +26,4 @@ export const createSwapKit = <P extends typeof defaultPlugins, W extends typeof 
   });
 };
 
-export { SwapKitApi } from "@swapkit/api";
+export { SwapKitApi } from "@stormcloud266/api";

@@ -1,5 +1,5 @@
-import { SwapKitApi } from "@swapkit/api";
-import { Chain } from "@swapkit/helpers";
+import { SwapKitApi } from "@stormcloud266/api";
+import { Chain } from "@stormcloud266/helpers";
 
 function parseChain(chain: string) {
   if (chain === "ARBITRUM") return Chain.Arbitrum;

@@ -10,7 +10,7 @@ import {
   SimpleTransactionBuilder,
 } from "@radixdlt/radix-engine-toolkit";
 import { mnemonicToSeed } from "@scure/bip39";
-import { AssetValue, Chain, RPCUrl, SwapKitError } from "@swapkit/helpers";
+import { AssetValue, Chain, RPCUrl, SwapKitError } from "@stormcloud266/helpers";
 import type { RadixNetwork } from "./types";
 
 // TODO combine this type with the more general SK type

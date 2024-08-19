@@ -1,11 +1,11 @@
 {
   "author": "swapkit-oss",
   "dependencies": {
-    "@swapkit/helpers": "workspace:*",
+    "@stormcloud266/helpers": "workspace:*",
     "@passkeys/core": "3.2.0",
     "@passkeys/react": "2.3.3",
-    "@swapkit/toolbox-evm": "workspace:*",
-    "@swapkit/toolbox-utxo": "workspace:*",
+    "@stormcloud266/toolbox-evm": "workspace:*",
+    "@stormcloud266/toolbox-utxo": "workspace:*",
     "sats-connect": "2.4.1"
   },
   "description": "SwapKit Wallet Exodus",
@@ -16,7 +16,7 @@
   "homepage": "https://github.com/thorswap/SwapKit",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@swapkit/wallet-exodus",
+  "name": "@stormcloud266/wallet-exodus",
   "react-native": "./src/index.ts",
   "repository": {
     "type": "git",

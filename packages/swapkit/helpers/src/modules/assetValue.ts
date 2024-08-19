@@ -134,7 +134,7 @@ export class AssetValue extends BigIntArithmetics {
       yellow(
         `Couldn't find static decimal for ${red(unsafeIdentifier)} (Using default ${red(BaseDecimal[chain])} decimal as fallback).
 This can result in incorrect calculations and mess with amount sent on transactions.
-You can load static assets by installing @swapkit/tokens package and calling AssetValue.loadStaticAssets()
+You can load static assets by installing @stormcloud266/tokens package and calling AssetValue.loadStaticAssets()
 or by passing asyncTokenLookup: true to the from() function, which will make it async and return a promise.`,
       ),
     );
@@ -161,7 +161,7 @@ or by passing asyncTokenLookup: true to the from() function, which will make it 
     return new Promise<{ ok: true } | { ok: false; message: string; error: Todo }>(
       (resolve, reject) => {
         try {
-          import("@swapkit/tokens").then((tokenPackages) => {
+          import("@stormcloud266/tokens").then((tokenPackages) => {
             for (const tokenList of Object.values(tokenPackages)) {
               for (const { identifier, chain, ...rest } of tokenList.tokens) {
                 staticTokensMap.set(identifier.toUpperCase() as TokenNames, {
@@ -179,7 +179,7 @@ or by passing asyncTokenLookup: true to the from() function, which will make it 
             ok: false,
             error,
             message:
-              "Couldn't load static assets. Ensure you have installed @swapkit/tokens package",
+              "Couldn't load static assets. Ensure you have installed @stormcloud266/tokens package",
           });
         }
       },

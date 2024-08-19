@@ -8,7 +8,7 @@ import {
 } from "@psf/bitcoincashjs-lib";
 
 import { mnemonicToSeedSync } from "@scure/bip39";
-import { Chain, DerivationPath, FeeOption, RPCUrl, type UTXOChain } from "@swapkit/helpers";
+import { Chain, DerivationPath, FeeOption, RPCUrl, type UTXOChain } from "@stormcloud266/helpers";
 import { Psbt } from "bitcoinjs-lib";
 import { ECPairFactory } from "ecpair";
 

@@ -8,9 +8,9 @@ import {
   WalletOption,
   ensureEVMApiKeys,
   setRequestClientConfig,
-} from "@swapkit/helpers";
-import type { DepositParam, TransferParams } from "@swapkit/toolbox-cosmos";
-import type { UTXOBuildTxParams } from "@swapkit/toolbox-utxo";
+} from "@stormcloud266/helpers";
+import type { DepositParam, TransferParams } from "@stormcloud266/toolbox-cosmos";
+import type { UTXOBuildTxParams } from "@stormcloud266/toolbox-utxo";
 
 import type { LEDGER_SUPPORTED_CHAINS } from "./helpers/index.ts";
 import { getLedgerAddress, getLedgerClient } from "./helpers/index.ts";
@@ -73,7 +73,7 @@ const getToolbox = async ({
     case Chain.Dash:
     case Chain.Dogecoin:
     case Chain.Litecoin: {
-      const { getToolboxByChain } = await import("@swapkit/toolbox-utxo");
+      const { getToolboxByChain } = await import("@stormcloud266/toolbox-utxo");
       const params = {
         apiClient: apis[chain],
         apiKey: blockchairApiKey,
@@ -109,7 +109,7 @@ const getToolbox = async ({
     case Chain.Polygon:
     case Chain.BinanceSmartChain: {
       const keys = ensureEVMApiKeys({ chain, covalentApiKey, ethplorerApiKey });
-      const { getToolboxByChain, getProvider } = await import("@swapkit/toolbox-evm");
+      const { getToolboxByChain, getProvider } = await import("@stormcloud266/toolbox-evm");
       const signer = await getLedgerClient({ chain, derivationPath });
       const address = await getLedgerAddress({ chain, ledgerClient: signer });
       const provider = getProvider(chain, rpcUrl);
@@ -120,7 +120,7 @@ const getToolbox = async ({
 
     case Chain.Cosmos: {
       const { createSigningStargateClient, getDenom, GaiaToolbox } = await import(
-        "@swapkit/toolbox-cosmos"
+        "@stormcloud266/toolbox-cosmos"
       );
       const toolbox = GaiaToolbox();
       const signer = await getLedgerClient({ chain, derivationPath });
@@ -171,7 +171,7 @@ const getToolbox = async ({
         getDefaultChainFee,
         fromBase64,
         prepareMessageForBroadcast,
-      } = await import("@swapkit/toolbox-cosmos");
+      } = await import("@stormcloud266/toolbox-cosmos");
       const toolbox = ThorchainToolbox({ stagenet: false });
       const signer = await getLedgerClient({ chain, derivationPath });
       const address = await getLedgerAddress({ chain, ledgerClient: signer });

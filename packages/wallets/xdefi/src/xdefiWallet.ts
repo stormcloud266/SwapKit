@@ -10,8 +10,8 @@ import {
   WalletOption,
   ensureEVMApiKeys,
   setRequestClientConfig,
-} from "@swapkit/helpers";
-import type { ARBToolbox, AVAXToolbox, BSCToolbox } from "@swapkit/toolbox-evm";
+} from "@stormcloud266/helpers";
+import type { ARBToolbox, AVAXToolbox, BSCToolbox } from "@stormcloud266/toolbox-evm";
 
 import type { WalletTxParams } from "./walletHelpers.ts";
 import {
@@ -49,7 +49,7 @@ async function getWalletMethodsForChain({
 }: ConnectConfig & { chain: (typeof XDEFI_SUPPORTED_CHAINS)[number] }) {
   switch (chain) {
     case Chain.Solana: {
-      const { SOLToolbox } = await import("@swapkit/toolbox-solana");
+      const { SOLToolbox } = await import("@stormcloud266/toolbox-solana");
 
       return { ...SOLToolbox(), transfer: walletTransfer };
     }
@@ -57,7 +57,7 @@ async function getWalletMethodsForChain({
     case Chain.Maya:
     case Chain.THORChain: {
       const { getToolboxByChain, THORCHAIN_GAS_VALUE, MAYA_GAS_VALUE } = await import(
-        "@swapkit/toolbox-cosmos"
+        "@stormcloud266/toolbox-cosmos"
       );
 
       const gasLimit = chain === Chain.Maya ? MAYA_GAS_VALUE : THORCHAIN_GAS_VALUE;
@@ -72,7 +72,7 @@ async function getWalletMethodsForChain({
 
     case Chain.Cosmos:
     case Chain.Kujira: {
-      const { getToolboxByChain } = await import("@swapkit/toolbox-cosmos");
+      const { getToolboxByChain } = await import("@stormcloud266/toolbox-cosmos");
       const toolbox = getToolboxByChain(chain);
 
       return {
@@ -88,7 +88,7 @@ async function getWalletMethodsForChain({
     case Chain.BitcoinCash:
     case Chain.Dogecoin:
     case Chain.Litecoin: {
-      const { getToolboxByChain } = await import("@swapkit/toolbox-utxo");
+      const { getToolboxByChain } = await import("@stormcloud266/toolbox-utxo");
       const toolbox = getToolboxByChain(chain)({ apiKey: blockchairApiKey });
 
       return { ...toolbox, transfer: walletTransfer };
@@ -101,7 +101,7 @@ async function getWalletMethodsForChain({
     case Chain.Ethereum:
     case Chain.Optimism:
     case Chain.Polygon: {
-      const { prepareNetworkSwitch, addEVMWalletNetwork } = await import("@swapkit/helpers");
+      const { prepareNetworkSwitch, addEVMWalletNetwork } = await import("@stormcloud266/helpers");
       const {
         getProvider,
         getToolboxByChain,
@@ -109,7 +109,7 @@ async function getWalletMethodsForChain({
         ethplorerApi,
         getBalance,
         BrowserProvider,
-      } = await import("@swapkit/toolbox-evm");
+      } = await import("@stormcloud266/toolbox-evm");
       const ethereumWindowProvider = getXDEFIProvider(chain);
 
       if (!ethereumWindowProvider) {

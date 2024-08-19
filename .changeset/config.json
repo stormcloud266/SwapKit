@@ -2,7 +2,10 @@
   "$schema": "https://unpkg.com/@changesets/config@3.0.1/schema.json",
   "access": "public",
   "baseBranch": "develop",
-  "changelog": ["@changesets/changelog-github", { "repo": "thorswap/SwapKit" }],
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "stormcloud266/SwapKit" }
+  ],
   "commit": false,
   "fixed": [],
   "linked": [],

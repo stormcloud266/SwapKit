@@ -9,7 +9,7 @@ import {
   WalletOption,
   type WalletTxParams,
   setRequestClientConfig,
-} from "@swapkit/helpers";
+} from "@stormcloud266/helpers";
 import { chainRegistry } from "./chainRegistry";
 
 declare global {
@@ -45,7 +45,7 @@ function connectKeplr({
       const offlineSigner = keplrClient?.getOfflineSignerOnlyAmino(chainId);
       if (!offlineSigner) throw new Error("Could not load offlineSigner");
       const { getToolboxByChain, getDenom, createSigningStargateClient } = await import(
-        "@swapkit/toolbox-cosmos"
+        "@stormcloud266/toolbox-cosmos"
       );
 
       const cosmJS = await createSigningStargateClient(

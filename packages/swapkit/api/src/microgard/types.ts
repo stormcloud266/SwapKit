@@ -1,4 +1,4 @@
-import type { AssetValue, SwapKitNumber } from "@swapkit/helpers";
+import type { AssetValue, SwapKitNumber } from "@stormcloud266/helpers";
 
 export type THORNameDetails = {
   entries: Array<{ address: string; chain: string }>;
