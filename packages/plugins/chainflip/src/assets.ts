@@ -1,4 +1,4 @@
-import { type AssetValue, SwapKitError } from "@stormcloud266/helpers";
+import { type AssetValue, SwapKitError } from "@lastnetwork/helpers";
 
 export const cfTickers = {
   "ARB.ETH": "ArbEth",

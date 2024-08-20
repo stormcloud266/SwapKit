@@ -1,13 +1,13 @@
 {
   "author": "swapkit-oss",
   "dependencies": {
-    "@stormcloud266/api": "workspace:*",
-    "@stormcloud266/core": "workspace:*",
-    "@stormcloud266/plugin-chainflip": "workspace:*",
-    "@stormcloud266/plugin-evm": "workspace:*",
-    "@stormcloud266/plugin-thorchain": "workspace:*",
-    "@stormcloud266/tokens": "workspace:*",
-    "@stormcloud266/wallets": "workspace:*"
+    "@lastnetwork/api": "workspace:*",
+    "@lastnetwork/core": "workspace:*",
+    "@lastnetwork/plugin-chainflip": "workspace:*",
+    "@lastnetwork/plugin-evm": "workspace:*",
+    "@lastnetwork/plugin-thorchain": "workspace:*",
+    "@lastnetwork/tokens": "workspace:*",
+    "@lastnetwork/wallets": "workspace:*"
   },
   "description": "SwapKit - SDK",
   "files": [
@@ -17,7 +17,7 @@
   "homepage": "https://github.com/thorswap/SwapKit",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@stormcloud266/sdk",
+  "name": "@lastnetwork/sdk",
   "react-native": "./src/index.ts",
   "repository": {
     "type": "git",

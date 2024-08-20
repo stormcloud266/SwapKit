@@ -1,4 +1,5 @@
 import crypto from "crypto";
+import { LedgerErrorCode } from "@lastnetwork/helpers";
 /** ******************************************************************************
  *  (c) 2019 ZondaX GmbH
  *  (c) 2016-2017 Ledger
@@ -16,7 +17,6 @@ import crypto from "crypto";
  *  limitations under the License.
  ******************************************************************************* */
 import { bech32 } from "@scure/base";
-import { LedgerErrorCode } from "@stormcloud266/helpers";
 import Ripemd160 from "ripemd160";
 
 import {

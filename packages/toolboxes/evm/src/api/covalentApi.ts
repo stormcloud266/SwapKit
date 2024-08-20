@@ -3,7 +3,7 @@ import {
   ChainIdToChain,
   RequestClient,
   formatBigIntToSafeValue,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 
 type CovalentBalanceResponse = {
   address: string;

@@ -1,5 +1,5 @@
-import type { QuoteResponseRoute } from "@stormcloud266/api";
-import type { AssetValue, SwapParams } from "@stormcloud266/helpers";
+import type { QuoteResponseRoute } from "@lastnetwork/api";
+import type { AssetValue, SwapParams } from "@lastnetwork/helpers";
 
 export type WithdrawFeeResponse = {
   egressId: string;

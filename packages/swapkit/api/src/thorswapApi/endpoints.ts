@@ -1,4 +1,4 @@
-import { RequestClient } from "@stormcloud266/helpers";
+import { RequestClient } from "@lastnetwork/helpers";
 
 import {
   ApiV1ErrorSchema,

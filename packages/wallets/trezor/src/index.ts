@@ -8,8 +8,8 @@ import {
   derivationPathToString,
   ensureEVMApiKeys,
   setRequestClientConfig,
-} from "@stormcloud266/helpers";
-import type { Psbt, UTXOTransferParams, UTXOType } from "@stormcloud266/toolbox-utxo";
+} from "@lastnetwork/helpers";
+import type { Psbt, UTXOTransferParams, UTXOType } from "@lastnetwork/toolbox-utxo";
 
 export const TREZOR_SUPPORTED_CHAINS = [
   Chain.Arbitrum,
@@ -69,7 +69,7 @@ async function getToolbox({
     case Chain.Optimism:
     case Chain.Polygon:
     case Chain.Ethereum: {
-      const { getProvider, getToolboxByChain } = await import("@stormcloud266/toolbox-evm");
+      const { getProvider, getToolboxByChain } = await import("@lastnetwork/toolbox-evm");
       const { getEVMSigner } = await import("./evmSigner.ts");
 
       const keys = ensureEVMApiKeys({ chain, ethplorerApiKey, covalentApiKey });
@@ -88,7 +88,7 @@ async function getToolbox({
     case Chain.Dogecoin:
     case Chain.Litecoin: {
       const { toCashAddress, getToolboxByChain, BCHToolbox } = await import(
-        "@stormcloud266/toolbox-utxo"
+        "@lastnetwork/toolbox-utxo"
       );
 
       if (!(blockchairApiKey || api)) {

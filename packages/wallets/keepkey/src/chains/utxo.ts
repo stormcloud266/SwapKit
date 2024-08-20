@@ -5,14 +5,14 @@ import {
   FeeOption,
   type UTXOChain,
   derivationPathToString,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 import type {
   BCHToolbox,
   BaseUTXOToolbox,
   Psbt,
   UTXOToolbox,
   UTXOTransferParams,
-} from "@stormcloud266/toolbox-utxo";
+} from "@lastnetwork/toolbox-utxo";
 
 import { ChainToKeepKeyName, bip32ToAddressNList } from "../helpers/coins.ts";
 
@@ -60,7 +60,7 @@ export const utxoWalletMethods = async ({
   }
 > => {
   if (!(apiKey || apiClient)) throw new Error("UTXO API key not found");
-  const { getToolboxByChain } = await import("@stormcloud266/toolbox-utxo");
+  const { getToolboxByChain } = await import("@lastnetwork/toolbox-utxo");
 
   const toolbox = getToolboxByChain(chain)({ apiClient, apiKey });
   const scriptType = [Chain.Bitcoin, Chain.Litecoin].includes(chain) ? "p2wpkh" : "p2pkh";

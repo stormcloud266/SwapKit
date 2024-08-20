@@ -1,6 +1,6 @@
 import type { CoinbaseWalletSDKOptions } from "@coinbase/wallet-sdk/dist/CoinbaseWalletSDK.js";
-import { setRequestClientConfig } from "@stormcloud266/helpers";
-import { Chain, type ConnectWalletParams, WalletOption } from "@stormcloud266/helpers";
+import { setRequestClientConfig } from "@lastnetwork/helpers";
+import { Chain, type ConnectWalletParams, WalletOption } from "@lastnetwork/helpers";
 
 import { getWalletForChain } from "./signer.js";
 

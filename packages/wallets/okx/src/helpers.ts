@@ -6,16 +6,16 @@ import {
   SwapKitError,
   addEVMWalletNetwork,
   prepareNetworkSwitch,
-} from "@stormcloud266/helpers";
-import type { GaiaToolbox } from "@stormcloud266/toolbox-cosmos";
+} from "@lastnetwork/helpers";
+import type { GaiaToolbox } from "@lastnetwork/toolbox-cosmos";
 import {
   AVAXToolbox,
   BSCToolbox,
   BrowserProvider,
   ETHToolbox,
   type Eip1193Provider,
-} from "@stormcloud266/toolbox-evm";
-import type { BTCToolbox, Psbt, UTXOTransferParams } from "@stormcloud266/toolbox-utxo";
+} from "@lastnetwork/toolbox-evm";
+import type { BTCToolbox, Psbt, UTXOTransferParams } from "@lastnetwork/toolbox-utxo";
 
 const cosmosTransfer =
   (rpcUrl?: string) =>
@@ -27,7 +27,7 @@ const cosmosTransfer =
     const { keplr: wallet } = window.okxwallet;
     const offlineSigner = wallet?.getOfflineSignerOnlyAmino(ChainId.Cosmos);
 
-    const { createSigningStargateClient } = await import("@stormcloud266/toolbox-cosmos");
+    const { createSigningStargateClient } = await import("@lastnetwork/toolbox-cosmos");
     const cosmJS = await createSigningStargateClient(rpcUrl || RPCUrl.Cosmos, offlineSigner);
 
     const coins = [
@@ -70,7 +70,7 @@ export const getWalletForChain = async ({
         throw new Error("No okxwallet found");
       }
 
-      const { getProvider } = await import("@stormcloud266/toolbox-evm");
+      const { getProvider } = await import("@lastnetwork/toolbox-evm");
 
       const evmWallet = await getWeb3WalletMethods({
         chain,
@@ -93,7 +93,7 @@ export const getWalletForChain = async ({
       }
       const { bitcoin: wallet } = window.okxwallet;
 
-      const { Psbt, BTCToolbox } = await import("@stormcloud266/toolbox-utxo");
+      const { Psbt, BTCToolbox } = await import("@lastnetwork/toolbox-utxo");
 
       const address = (await wallet.connect()).address;
 
@@ -121,7 +121,7 @@ export const getWalletForChain = async ({
       const accounts = await wallet.getOfflineSignerOnlyAmino(ChainId.Cosmos).getAccounts();
       if (!accounts?.[0]) throw new Error("No cosmos account found");
 
-      const { GaiaToolbox } = await import("@stormcloud266/toolbox-cosmos");
+      const { GaiaToolbox } = await import("@lastnetwork/toolbox-cosmos");
       const [{ address }] = accounts;
 
       return {

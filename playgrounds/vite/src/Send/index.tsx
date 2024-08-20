@@ -1,4 +1,4 @@
-import type { AssetValue, WalletChain } from "@stormcloud266/core";
+import type { AssetValue, WalletChain } from "@lastnetwork/core";
 import { useCallback, useState } from "react";
 import type { SwapKitClient } from "../swapKitClient";
 
@@ -31,7 +31,10 @@ export default function Send({
     });
 
     window.open(
-      `${skClient.getExplorerTxUrl({ chain: inputAssetValue.chain, txHash: txHash as string })}`,
+      `${skClient.getExplorerTxUrl({
+        chain: inputAssetValue.chain,
+        txHash: txHash as string,
+      })}`,
       "_blank",
     );
   }, [inputAsset, inputAssetValue, skClient, recipient]);

@@ -6,7 +6,7 @@ import {
   ChainId,
   DerivationPath,
   SwapKitNumber,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 
 import { CosmosClient } from "../cosmosClient.ts";
 import type { GaiaToolboxType, ToolboxParams } from "../index.ts";

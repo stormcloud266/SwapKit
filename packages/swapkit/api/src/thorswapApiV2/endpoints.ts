@@ -1,4 +1,4 @@
-import { type ProviderName, RequestClient, SwapKitError } from "@stormcloud266/helpers";
+import { type ProviderName, RequestClient, SwapKitError } from "@lastnetwork/helpers";
 import {
   type PriceRequest,
   type PriceResponse,

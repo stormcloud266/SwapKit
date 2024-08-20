@@ -1,6 +1,6 @@
-import { AssetValue, Chain, SwapKit } from "@stormcloud266/core";
-import { ThorchainPlugin } from "@stormcloud266/plugin-thorchain";
-import { keystoreWallet } from "@stormcloud266/wallet-keystore";
+import { AssetValue, Chain, SwapKit } from "@lastnetwork/core";
+import { ThorchainPlugin } from "@lastnetwork/plugin-thorchain";
+import { keystoreWallet } from "@lastnetwork/wallet-keystore";
 const phrase = process.env.PHRASES;
 
 if (!phrase) throw new Error("No phrase found");

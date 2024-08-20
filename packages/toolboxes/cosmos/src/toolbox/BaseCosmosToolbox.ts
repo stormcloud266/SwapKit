@@ -1,7 +1,7 @@
 import { Bip39, EnglishMnemonic, Slip10, Slip10Curve, stringToPath } from "@cosmjs/crypto";
 import { DirectSecp256k1HdWallet, DirectSecp256k1Wallet } from "@cosmjs/proto-signing";
-import { SwapKitApi } from "@stormcloud266/api";
-import { AssetValue, Chain, ChainId, type DerivationPath } from "@stormcloud266/helpers";
+import { SwapKitApi } from "@lastnetwork/api";
+import { AssetValue, Chain, ChainId, type DerivationPath } from "@lastnetwork/helpers";
 
 import { CosmosClient } from "../cosmosClient.ts";
 import type { ToolboxParams } from "../index.ts";

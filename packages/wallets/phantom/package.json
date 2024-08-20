@@ -1,8 +1,8 @@
 {
   "description": "SwapKit Wallet - Phantom",
   "dependencies": {
-    "@stormcloud266/helpers": "workspace:*",
-    "@stormcloud266/toolbox-solana": "workspace:*"
+    "@lastnetwork/helpers": "workspace:*",
+    "@lastnetwork/toolbox-solana": "workspace:*"
   },
   "files": [
     "src/",
@@ -11,7 +11,7 @@
   "homepage": "https://github.com/thorswap/SwapKit",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@stormcloud266/wallet-phantom",
+  "name": "@lastnetwork/wallet-phantom",
   "react-native": "./src/index.ts",
   "repository": {
     "type": "git",

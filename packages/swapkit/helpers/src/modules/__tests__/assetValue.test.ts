@@ -358,7 +358,7 @@ describe("AssetValue", () => {
   });
 
   describe("fromIdentifierSync", () => {
-    test("(same as fromIdentifier) - creates AssetValue from string via `@stormcloud266/tokens` lists", async () => {
+    test("(same as fromIdentifier) - creates AssetValue from string via `@lastnetwork/tokens` lists", async () => {
       await AssetValue.loadStaticAssets();
       const thor = AssetValue.from({
         asset: "ARB.USDT-0XFD086BC7CD5C481DCC9C85EBE478A1C0B69FCBB9",
@@ -380,7 +380,7 @@ describe("AssetValue", () => {
   });
 
   describe("fromStringSync", () => {
-    test("creates AssetValue from string via `@stormcloud266/tokens` lists", async () => {
+    test("creates AssetValue from string via `@lastnetwork/tokens` lists", async () => {
       await AssetValue.loadStaticAssets();
       const thor = AssetValue.from({
         asset: "ETH.THOR-0xa5f2211b9b8170f694421f2046281775e8468044",
@@ -416,7 +416,7 @@ describe("AssetValue", () => {
       );
     });
 
-    test("returns safe decimals if string is not in `@stormcloud266/tokens` lists", async () => {
+    test("returns safe decimals if string is not in `@lastnetwork/tokens` lists", async () => {
       await AssetValue.loadStaticAssets();
       const fakeAvaxUSDCAssetString = "AVAX.USDC-1234";
       const fakeAvaxUSDCAsset = AssetValue.from({ asset: fakeAvaxUSDCAssetString });
@@ -435,7 +435,7 @@ describe("AssetValue", () => {
       );
     });
 
-    test("returns safe decimals if string is not in `@stormcloud266/tokens` lists with multiple dashes", async () => {
+    test("returns safe decimals if string is not in `@lastnetwork/tokens` lists with multiple dashes", async () => {
       await AssetValue.loadStaticAssets();
       const fakeAvaxUSDCAssetString = "AVAX.USDC-LPT-1234";
       const fakeAvaxUSDCAsset2 = AssetValue.from({ asset: fakeAvaxUSDCAssetString });
@@ -454,7 +454,7 @@ describe("AssetValue", () => {
       );
     });
 
-    test("returns proper avax string with address from `@stormcloud266/tokens` lists", async () => {
+    test("returns proper avax string with address from `@lastnetwork/tokens` lists", async () => {
       await AssetValue.loadStaticAssets();
       const avaxBTCb = "AVAX.BTC.b-0x152b9d0fdc40c096757f570a51e494bd4b943e50";
       const AvaxBTCb = AssetValue.from({ asset: avaxBTCb });
@@ -475,7 +475,7 @@ describe("AssetValue", () => {
   });
 
   describe("fromStringWithBaseSync", () => {
-    test("creates AssetValue from string with base decimals via `@stormcloud266/tokens` lists", async () => {
+    test("creates AssetValue from string with base decimals via `@lastnetwork/tokens` lists", async () => {
       await AssetValue.loadStaticAssets();
       const btc = AssetValue.from({
         asset: "BTC.BTC",
@@ -499,7 +499,7 @@ describe("AssetValue", () => {
       expect(btc.getBaseValue("string")).toBe("5200000000000");
     });
 
-    test("returns safe decimals if string is not in `@stormcloud266/tokens` lists", async () => {
+    test("returns safe decimals if string is not in `@lastnetwork/tokens` lists", async () => {
       await AssetValue.loadStaticAssets();
       const fakeAvaxUSDCAssetString = "AVAX.USDC-1234";
       const fakeAvaxUSDCAsset = AssetValue.from({
@@ -525,7 +525,7 @@ describe("AssetValue", () => {
       expect(fakeAvaxUSDCAsset.getBaseValue("string")).toBe("10000000000");
     });
 
-    test("returns proper avax string with address from `@stormcloud266/tokens` lists", async () => {
+    test("returns proper avax string with address from `@lastnetwork/tokens` lists", async () => {
       await AssetValue.loadStaticAssets();
       const avaxUSDC = "AVAX.USDC-0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e";
       const AvaxUSDC = AssetValue.from({

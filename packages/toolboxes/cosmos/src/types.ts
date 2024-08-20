@@ -1,6 +1,6 @@
 import type { StdFee } from "@cosmjs/amino";
 import type { OfflineDirectSigner } from "@cosmjs/proto-signing";
-import type { AssetValue, ChainId, FeeOption } from "@stormcloud266/helpers";
+import type { AssetValue, ChainId, FeeOption } from "@lastnetwork/helpers";
 
 import type {
   GaiaToolboxType,

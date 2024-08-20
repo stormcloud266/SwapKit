@@ -1,6 +1,6 @@
 import type { ProposalTypes } from "@walletconnect/types";
 
-import { SwapKitError } from "@stormcloud266/helpers";
+import { SwapKitError } from "@lastnetwork/helpers";
 import {
   DEFAULT_COSMOS_METHODS,
   DEFAULT_EIP155_METHODS,

@@ -1,4 +1,4 @@
-import type { QuoteResponseRoute } from "@stormcloud266/api";
+import type { QuoteResponseRoute } from "@lastnetwork/api";
 import {
   AssetValue,
   Chain,
@@ -12,7 +12,7 @@ import {
   type SwapKitPluginParams,
   type SwapParams,
   type UTXOChain,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 import { basePlugin } from "./basePlugin.ts";
 import { prepareTxParams, validateAddressType } from "./shared.ts";
 import type { AddLiquidityParams, CoreTxParams, CreateLiquidityParams } from "./types.ts";
@@ -65,7 +65,7 @@ function plugin({ getWallet, stagenet = false }: SwapKitPluginParams) {
 
         case Chain.Arbitrum:
         case Chain.Ethereum: {
-          const { getChecksumAddressFromAsset } = await import("@stormcloud266/toolbox-evm");
+          const { getChecksumAddressFromAsset } = await import("@lastnetwork/toolbox-evm");
           const wallet = getWallet(chain);
 
           const abi = chain === Chain.Arbitrum ? MayaArbitrumVaultAbi : MayaEthereumVaultAbi;

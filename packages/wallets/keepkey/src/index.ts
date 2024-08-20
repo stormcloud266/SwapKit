@@ -5,7 +5,7 @@ import {
   type EVMChain,
   WalletOption,
   setRequestClientConfig,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 
 import { KeepKeySdk } from "@keepkey/keepkey-sdk";
 export type { PairingInfo } from "@keepkey/keepkey-sdk";
@@ -58,7 +58,7 @@ const getWalletMethods = async ({
   ethplorerApiKey,
   blockchairApiKey,
 }: KeepKeyOptions) => {
-  const { getProvider, getToolboxByChain } = await import("@stormcloud266/toolbox-evm");
+  const { getProvider, getToolboxByChain } = await import("@lastnetwork/toolbox-evm");
 
   switch (chain) {
     case Chain.BinanceSmartChain:

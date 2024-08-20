@@ -1,4 +1,4 @@
-import type { AssetValue, FeeOption, UTXOChain, Witness } from "@stormcloud266/helpers";
+import type { AssetValue, FeeOption, UTXOChain, Witness } from "@lastnetwork/helpers";
 
 import type { BlockchairApiType } from "../api/blockchairApi.ts";
 import type { BCHToolbox, BTCToolbox, DOGEToolbox, LTCToolbox } from "../index.ts";

@@ -1,4 +1,4 @@
-import { Chain, RequestClient, type UTXOChain } from "@stormcloud266/helpers";
+import { Chain, RequestClient, type UTXOChain } from "@lastnetwork/helpers";
 
 import type {
   BlockchairAddressResponse,

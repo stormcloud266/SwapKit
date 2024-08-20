@@ -6,7 +6,7 @@ import {
   type FeeOption,
   RPCUrl,
   SwapKitNumber,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 
 import { createStargateClient } from "../util.ts";
 import { bech32ToBase64 } from "./addressFormat.ts";

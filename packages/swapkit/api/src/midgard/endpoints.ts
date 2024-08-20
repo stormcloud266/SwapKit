@@ -1,10 +1,4 @@
-import {
-  AssetValue,
-  BaseDecimal,
-  Chain,
-  RequestClient,
-  SwapKitNumber,
-} from "@stormcloud266/helpers";
+import { AssetValue, BaseDecimal, Chain, RequestClient, SwapKitNumber } from "@lastnetwork/helpers";
 import type {
   BorrowerDetails,
   MemberDetailsMayachain,

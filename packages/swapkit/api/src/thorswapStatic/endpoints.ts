@@ -3,7 +3,7 @@ import {
   type ProviderName,
   RequestClient,
   getChainIdentifier,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 
 import { getTokenListProvidersV2 } from "../thorswapApiV2/endpoints.ts";
 import type { TokenListProvidersResponse } from "../thorswapApiV2/types.ts";

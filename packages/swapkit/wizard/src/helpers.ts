@@ -43,7 +43,7 @@ export function getPackageManager() {
 
 export function handleCancel(error?: NotWorth) {
   console.error(error);
-  outro(bold(red("@stormcloud266/wizard - cancelled")));
+  outro(bold(red("@lastnetwork/wizard - cancelled")));
   rmSync("./temp", { recursive: true, force: true });
   return process.exit(0);
 }
@@ -55,7 +55,7 @@ export function commandText(command: string) {
 export function helpText(packageManager: ReturnType<typeof getPackageManager>) {
   return intro(`
   Usage:
-  $ ${bold(magenta(`${packageManager.exec} @stormcloud266/wizard <command>`))}
+  $ ${bold(magenta(`${packageManager.exec} @lastnetwork/wizard <command>`))}
 
   ${underline("Available commands:")}
   - ${commandText("init")}:    Initialize a new SwapKit project with example client
@@ -92,7 +92,7 @@ export function listDirectoryFiles(sourceDirectory: string, onlyEJS = false): st
 const baseTemplatePath = existsSync("./src/template")
   ? resolve(dirname, "./src/template")
   : resolve(
-      require.resolve("@stormcloud266/wizard").split("/").slice(0, -1).join("/"),
+      require.resolve("@lastnetwork/wizard").split("/").slice(0, -1).join("/"),
       "./src/template",
     );
 

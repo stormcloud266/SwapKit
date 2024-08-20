@@ -1,4 +1,4 @@
-import type { QuoteResponseRoute } from "@stormcloud266/api";
+import type { QuoteResponseRoute } from "@lastnetwork/api";
 import {
   ApproveMode,
   type ApproveReturnType,
@@ -9,7 +9,7 @@ import {
   SwapKitError,
   type SwapKitPluginParams,
   type SwapParams,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 
 type ApproveParams = {
   assetValue: AssetValue;

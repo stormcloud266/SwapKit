@@ -1,5 +1,5 @@
 import type { ChainInfo } from "@keplr-wallet/types";
-import { ChainId } from "@stormcloud266/helpers";
+import { ChainId } from "@lastnetwork/helpers";
 
 export const chainRegistry = new Map<ChainId, ChainInfo>([
   [

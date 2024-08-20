@@ -1,4 +1,4 @@
-import { Chain, FeeOption } from "@stormcloud266/helpers";
+import { Chain, FeeOption } from "@lastnetwork/helpers";
 import { networks } from "bitcoinjs-lib";
 // @ts-ignore TODO: check why wallets doesn't see modules included in toolbox
 import coininfo from "coininfo";

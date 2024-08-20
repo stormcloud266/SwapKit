@@ -11,12 +11,12 @@ import {
   type DerivationPathArray,
   RPCUrl,
   derivationPathToString,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 import type {
   DepositParam,
   ThorchainToolboxType,
   TransferParams,
-} from "@stormcloud266/toolbox-cosmos";
+} from "@lastnetwork/toolbox-cosmos";
 
 import { bip32ToAddressNList } from "../helpers/coins.js";
 
@@ -36,7 +36,7 @@ export const thorchainWalletMethods = async ({
 }): Promise<ThorchainToolboxType & { address: string }> => {
   const { makeSignDoc } = await import("@cosmjs/amino");
   const { buildAminoMsg, getDefaultChainFee, createStargateClient, ThorchainToolbox } =
-    await import("@stormcloud266/toolbox-cosmos");
+    await import("@lastnetwork/toolbox-cosmos");
 
   const toolbox = ThorchainToolbox({ stagenet: false });
   const derivationPathString = derivationPath

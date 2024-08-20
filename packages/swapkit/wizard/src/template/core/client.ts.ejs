@@ -1,20 +1,20 @@
 <%_ if (config.clientType === "sdk") { _%>
-import { createSwapKit } from "@stormcloud266/sdk";
+import { createSwapKit } from "@lastnetwork/sdk";
 
 export type SwapKitClient = ReturnType<typeof createSwapKit>;
 <%_ } else { _%>
-import { SwapKit } from "@stormcloud266/core";
+import { SwapKit } from "@lastnetwork/core";
 <%_ if (plugins.includes("evm")) { _%>
-import { EVMPlugin } from "@stormcloud266/plugin-evm";
+import { EVMPlugin } from "@lastnetwork/plugin-evm";
 <%_ } _%>
 <%_ if (plugins.includes("thorchain")) { _%>
-import { MayachainPlugin, ThorchainPlugin } from "@stormcloud266/plugin-thorchain";
+import { MayachainPlugin, ThorchainPlugin } from "@lastnetwork/plugin-thorchain";
 <%_ } _%>
 <%_ if (plugins.includes("chainflip")) { _%>
-import { ChainflipPlugin } from "@stormcloud266/plugin-chainflip";
+import { ChainflipPlugin } from "@lastnetwork/plugin-chainflip";
 <%_ } _%>
 <%_ wallets.forEach(function(walletName) { _%>
-import { <%= walletName === 'wc' ? 'walletconnect' : walletName.split('-')[0] %>Wallet } from "@stormcloud266/wallet-<%= walletName %>";
+import { <%= walletName === 'wc' ? 'walletconnect' : walletName.split('-')[0] %>Wallet } from "@lastnetwork/wallet-<%= walletName %>";
 <%_ }); _%>
 
 export type SwapKitClient = ReturnType<typeof SwapKit>;

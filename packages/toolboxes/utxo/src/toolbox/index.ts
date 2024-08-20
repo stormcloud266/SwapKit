@@ -1,4 +1,4 @@
-import { Chain, ChainToRPC, type UTXOChain } from "@stormcloud266/helpers";
+import { Chain, ChainToRPC, type UTXOChain } from "@lastnetwork/helpers";
 
 import type { BlockchairApiType } from "../api/blockchairApi.ts";
 import { blockchairApi } from "../api/blockchairApi.ts";

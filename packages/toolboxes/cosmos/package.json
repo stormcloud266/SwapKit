@@ -7,8 +7,8 @@
     "@cosmjs/proto-signing": "0.32.4",
     "@cosmjs/stargate": "0.32.4",
     "@scure/base": "1.1.7",
-    "@stormcloud266/api": "workspace:*",
-    "@stormcloud266/helpers": "workspace:*",
+    "@lastnetwork/api": "workspace:*",
+    "@lastnetwork/helpers": "workspace:*",
     "base64-js": "1.5.1",
     "cosmjs-types": "0.9.0",
     "protobufjs": "7.3.2"
@@ -26,7 +26,7 @@
   "homepage": "https://github.com/thorswap/SwapKit",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@stormcloud266/toolbox-cosmos",
+  "name": "@lastnetwork/toolbox-cosmos",
   "react-native": "./src/index.ts",
   "repository": {
     "type": "git",

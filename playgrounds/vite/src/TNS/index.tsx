@@ -1,4 +1,4 @@
-import { AssetValue, Chain, SwapKitApi, type THORNameDetails } from "@stormcloud266/sdk";
+import { AssetValue, Chain, SwapKitApi, type THORNameDetails } from "@lastnetwork/sdk";
 import { useCallback, useState } from "react";
 import type { SwapKitClient } from "../swapKitClient";
 

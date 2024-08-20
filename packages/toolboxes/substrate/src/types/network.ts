@@ -1,4 +1,4 @@
-import type { SubstrateChain } from "@stormcloud266/helpers";
+import type { SubstrateChain } from "@lastnetwork/helpers";
 
 export const polkadotNetwork = {
   prefix: 0,

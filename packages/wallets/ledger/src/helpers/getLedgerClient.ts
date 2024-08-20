@@ -1,9 +1,4 @@
-import {
-  Chain,
-  type DerivationPathArray,
-  SwapKitError,
-  WalletOption,
-} from "@stormcloud266/helpers";
+import { Chain, type DerivationPathArray, SwapKitError, WalletOption } from "@lastnetwork/helpers";
 
 import { CosmosLedger } from "../clients/cosmos.ts";
 import {
@@ -69,7 +64,7 @@ export const getLedgerClient = async <T extends LedgerSupportedChain>({
     case Chain.Ethereum:
     case Chain.Optimism:
     case Chain.Polygon: {
-      const { getProvider } = await import("@stormcloud266/toolbox-evm");
+      const { getProvider } = await import("@lastnetwork/toolbox-evm");
       const params = { provider: getProvider(chain), derivationPath };
 
       switch (chain) {

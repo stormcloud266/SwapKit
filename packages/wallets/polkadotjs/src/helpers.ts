@@ -1,8 +1,8 @@
-import { Chain, SwapKitError, WalletOption } from "@stormcloud266/helpers";
+import { Chain, SwapKitError, WalletOption } from "@lastnetwork/helpers";
 
 import { decodeAddress, encodeAddress } from "@polkadot/util-crypto";
 
-import type { InjectedWindow, PolkadotToolbox } from "@stormcloud266/toolbox-substrate";
+import type { InjectedWindow, PolkadotToolbox } from "@lastnetwork/toolbox-substrate";
 
 export const convertAddress = (inputAddress: string, newPrefix: number): string => {
   const decodedAddress = decodeAddress(inputAddress);
@@ -22,7 +22,7 @@ export const getWalletForChain = async ({
 }> => {
   switch (chain) {
     case Chain.Polkadot: {
-      const { getToolboxByChain } = await import("@stormcloud266/toolbox-substrate");
+      const { getToolboxByChain } = await import("@lastnetwork/toolbox-substrate");
       const injectedWindow = window as Window & InjectedWindow;
       const injectedExtension = injectedWindow?.injectedWeb3?.["polkadot-js"];
 

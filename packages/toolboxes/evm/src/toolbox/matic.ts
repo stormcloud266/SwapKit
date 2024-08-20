@@ -5,7 +5,7 @@ import {
   ChainToExplorerUrl,
   type FeeOption,
   RPCUrl,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 import type { BrowserProvider, JsonRpcProvider, Signer } from "ethers";
 
 import type { CovalentApiType } from "../api/covalentApi.ts";

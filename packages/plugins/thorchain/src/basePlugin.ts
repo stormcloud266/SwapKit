@@ -1,4 +1,4 @@
-import { SwapKitApi, type ThornodeEndpointParams } from "@stormcloud266/api";
+import { SwapKitApi, type ThornodeEndpointParams } from "@lastnetwork/api";
 import {
   ApproveMode,
   type ApproveReturnType,
@@ -20,7 +20,7 @@ import {
   getMemoForWithdraw,
   getMinAmountByChain,
   wrapWithThrow,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 
 import type {
   AddLiquidityParams,

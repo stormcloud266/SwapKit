@@ -1,4 +1,4 @@
-import { Chain, type UTXOChain } from "@stormcloud266/helpers";
+import { Chain, type UTXOChain } from "@lastnetwork/helpers";
 
 import type { TargetOutput, UTXOCalculateTxSizeParams, UTXOType } from "../types/index.ts";
 import {

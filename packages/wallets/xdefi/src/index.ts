@@ -1,6 +1,6 @@
 import type { Keplr } from "@keplr-wallet/types";
-import type { Eip1193Provider } from "@stormcloud266/toolbox-evm";
-import type { SolanaProvider } from "@stormcloud266/toolbox-solana";
+import type { Eip1193Provider } from "@lastnetwork/toolbox-evm";
+import type { SolanaProvider } from "@lastnetwork/toolbox-solana";
 
 export { xdefiWallet, XDEFI_SUPPORTED_CHAINS } from "./xdefiWallet.ts";
 

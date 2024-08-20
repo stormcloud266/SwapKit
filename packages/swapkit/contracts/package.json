@@ -7,7 +7,7 @@
   "homepage": "https://github.com/thorswap/SwapKit",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@stormcloud266/contracts",
+  "name": "@lastnetwork/contracts",
   "react-native": "./src/index.ts",
   "repository": {
     "type": "git",

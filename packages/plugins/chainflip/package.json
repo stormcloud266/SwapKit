@@ -4,11 +4,11 @@
     "@chainflip/sdk": "1.4.2",
     "@polkadot/keyring": "12.6.2",
     "@polkadot/util": "12.6.2",
-    "@stormcloud266/api": "workspace:*",
-    "@stormcloud266/helpers": "workspace:*",
-    "@stormcloud266/toolbox-evm": "workspace:*",
-    "@stormcloud266/toolbox-substrate": "workspace:*",
-    "@stormcloud266/toolbox-utxo": "workspace:*"
+    "@lastnetwork/api": "workspace:*",
+    "@lastnetwork/helpers": "workspace:*",
+    "@lastnetwork/toolbox-evm": "workspace:*",
+    "@lastnetwork/toolbox-substrate": "workspace:*",
+    "@lastnetwork/toolbox-utxo": "workspace:*"
   },
   "description": "SwapKit Plugin - ChainFlip",
   "files": [
@@ -18,7 +18,7 @@
   "homepage": "https://github.com/thorswap/SwapKit",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@stormcloud266/plugin-chainflip",
+  "name": "@lastnetwork/plugin-chainflip",
   "react-native": "./src/index.ts",
   "repository": {
     "type": "git",

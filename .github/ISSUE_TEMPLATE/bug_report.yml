@@ -55,25 +55,25 @@ body:
       description: |
         Which packages are affected by the issue?
       options:
-        - label: "@stormcloud266/sdk"
-        - label: "@stormcloud266/core"
-        - label: "@stormcloud266/api"
-        - label: "@stormcloud266/helpers"
-        - label: "@stormcloud266/tokens"
+        - label: "@lastnetwork/sdk"
+        - label: "@lastnetwork/core"
+        - label: "@lastnetwork/api"
+        - label: "@lastnetwork/helpers"
+        - label: "@lastnetwork/tokens"
 
-        - label: "@stormcloud266/toolbox-cosmos"
-        - label: "@stormcloud266/toolbox-evm"
-        - label: "@stormcloud266/toolbox-utxo"
+        - label: "@lastnetwork/toolbox-cosmos"
+        - label: "@lastnetwork/toolbox-evm"
+        - label: "@lastnetwork/toolbox-utxo"
 
-        - label: "@stormcloud266/wallet-evm-extensions"
-        - label: "@stormcloud266/wallet-keepkey"
-        - label: "@stormcloud266/wallet-keplr"
-        - label: "@stormcloud266/wallet-keystore"
-        - label: "@stormcloud266/wallet-ledger"
-        - label: "@stormcloud266/wallet-okx"
-        - label: "@stormcloud266/wallet-trezor"
-        - label: "@stormcloud266/wallet-wc"
-        - label: "@stormcloud266/wallet-xdefi"
+        - label: "@lastnetwork/wallet-evm-extensions"
+        - label: "@lastnetwork/wallet-keepkey"
+        - label: "@lastnetwork/wallet-keplr"
+        - label: "@lastnetwork/wallet-keystore"
+        - label: "@lastnetwork/wallet-ledger"
+        - label: "@lastnetwork/wallet-okx"
+        - label: "@lastnetwork/wallet-trezor"
+        - label: "@lastnetwork/wallet-wc"
+        - label: "@lastnetwork/wallet-xdefi"
 
   - type: textarea
     attributes:
@@ -83,7 +83,7 @@ body:
       value: |
         Package versions:
         ```bash
-        # Paste the output of `<npm|yarn|pnpm|bun pm> ls --depth=0 | grep @stormcloud266` here
+        # Paste the output of `<npm|yarn|pnpm|bun pm> ls --depth=0 | grep @lastnetwork` here
         ```
     validations:
       required: true

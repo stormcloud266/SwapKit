@@ -1,7 +1,7 @@
-import { AssetValue, type Chain, type FullWallet } from "@stormcloud266/core";
+import { AssetValue, type Chain, type FullWallet } from "@lastnetwork/core";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
-import { WalletWidget } from "@stormcloud266/wallet-exodus";
+import { WalletWidget } from "@lastnetwork/wallet-exodus";
 import Liquidity from "./Liquidity";
 import Loan from "./Loan";
 import Multisig from "./Multisig";

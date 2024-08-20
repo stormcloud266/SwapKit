@@ -1,5 +1,5 @@
-import type { AssetValue, Chain } from "@stormcloud266/core";
-import { ThorchainToolbox, buildAminoMsg } from "@stormcloud266/toolbox-cosmos";
+import type { AssetValue, Chain } from "@lastnetwork/core";
+import { ThorchainToolbox, buildAminoMsg } from "@lastnetwork/toolbox-cosmos";
 import { fromByteArray } from "base64-js";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { SwapKitClient } from "../swapKitClient";
@@ -101,7 +101,10 @@ export default function Multisig({
     setIsBroadcasting(true);
     const txHash = await toolbox.broadcastMultisigTx(
       JSON.stringify(transaction),
-      Object.entries(signatures).map(([pubKey, signature]) => ({ pubKey, signature })),
+      Object.entries(signatures).map(([pubKey, signature]) => ({
+        pubKey,
+        signature,
+      })),
       Object.values(pubkeys),
       threshold,
       bodyBytes,

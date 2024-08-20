@@ -260,7 +260,7 @@ export async function findAssetBy(
     | { chain: EVMChain | Chain.Radix; contract: string }
     | { identifier: `${Chain}.${string}` },
 ) {
-  const tokenPackages = await import("@stormcloud266/tokens");
+  const tokenPackages = await import("@lastnetwork/tokens");
 
   for (const tokenList of Object.values(tokenPackages)) {
     for (const { identifier, chain: tokenChain, ...rest } of tokenList.tokens) {

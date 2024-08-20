@@ -1,8 +1,8 @@
 {
   "dependencies": {
     "@coinbase/wallet-sdk": "3.7.2",
-    "@stormcloud266/helpers": "workspace:*",
-    "@stormcloud266/toolbox-evm": "workspace:*"
+    "@lastnetwork/helpers": "workspace:*",
+    "@lastnetwork/toolbox-evm": "workspace:*"
   },
   "description": "SwapKit Wallet - Coinbase",
   "files": [
@@ -12,7 +12,7 @@
   "homepage": "https://github.com/thorswap/SwapKit",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@stormcloud266/wallet-coinbase",
+  "name": "@lastnetwork/wallet-coinbase",
   "react-native": "./src/index.ts",
   "repository": {
     "type": "git",

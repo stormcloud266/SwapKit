@@ -1,4 +1,4 @@
-import type { QuoteRoute } from "@stormcloud266/api";
+import type { QuoteRoute } from "@lastnetwork/api";
 import type {
   AssetValue,
   CosmosWallets,
@@ -7,7 +7,7 @@ import type {
   MemoType,
   ThorchainWallets,
   UTXOWallets,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 
 export type SupportedChain = keyof (EVMWallets & UTXOWallets & ThorchainWallets & CosmosWallets);
 
