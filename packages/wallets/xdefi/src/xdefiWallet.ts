@@ -11,7 +11,7 @@ import {
   ensureEVMApiKeys,
   setRequestClientConfig,
 } from "@lastnetwork/helpers";
-import type { ARBToolbox, AVAXToolbox, BSCToolbox } from "@lastnetwork/toolbox-evm";
+import type { ARBToolbox, AVAXToolbox, BSCToolbox, SEPToolbox } from "@lastnetwork/toolbox-evm";
 
 import type { WalletTxParams } from "./walletHelpers.ts";
 import {

@@ -1,11 +1,11 @@
-import { BaseDecimal, Chain, type FeeOption } from "@swapkit/helpers";
+import { BaseDecimal, Chain, type FeeOption } from "@lastnetwork/helpers";
 import type { BrowserProvider, JsonRpcProvider, JsonRpcSigner, Signer } from "ethers";
 
 import type { EthplorerApiType } from "../api/ethplorerApi.ts";
 import { ethplorerApi } from "../api/ethplorerApi.ts";
 import { type EVMTxBaseParams, estimateTransactionFee, getBalance } from "../index.ts";
 
-import { BaseEVMToolbox } from "./BaseEVMToolbox.ts";
+import { EVMToolbox } from "./EVMToolbox.ts";
 
 const getNetworkParams = () => ({
   chainId: "0xaa36a7",
@@ -28,7 +28,7 @@ export const SEPToolbox = ({
   provider: JsonRpcProvider | BrowserProvider;
 }) => {
   const sepoliaApi = api || ethplorerApi(ethplorerApiKey, true);
-  const baseToolbox = BaseEVMToolbox({ provider, signer });
+  const baseToolbox = EVMToolbox({ provider, signer });
   const chain = Chain.Sepolia;
 
   return {
