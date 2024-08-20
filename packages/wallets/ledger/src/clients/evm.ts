@@ -162,6 +162,9 @@ type LedgerParams = { provider: Provider; derivationPath?: DerivationPathArray }
 export const EthereumLedger = ({ provider, derivationPath }: LedgerParams) =>
   new EVMLedgerInterface({ chainId: ChainId.Ethereum, provider, derivationPath });
 
+export const SepoliaLedger = ({ provider, derivationPath }: LedgerParams) =>
+  new EVMLedgerInterface({ chainId: ChainId.Sepolia, provider, derivationPath });
+
 export const AvalancheLedger = ({ provider, derivationPath }: LedgerParams) =>
   new EVMLedgerInterface({ chainId: ChainId.Avalanche, provider, derivationPath });
 

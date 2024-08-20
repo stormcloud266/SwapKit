@@ -19,7 +19,7 @@
     "size-limit": "11.1.4",
     "typescript": "5.5.4"
   },
-  "name": "stormcloud266-swapkit-monorepo",
+  "name": "lastnetwork-swapkit-monorepo",
   "packageManager": "^bun@1.1.17",
   "private": true,
   "scripts": {

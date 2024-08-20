@@ -8,6 +8,7 @@ import {
   EthereumLedger,
   OptimismLedger,
   PolygonLedger,
+  SepoliaLedger,
 } from "../clients/evm.ts";
 import { THORChainLedger } from "../clients/thorchain/index.ts";
 import {
@@ -29,6 +30,7 @@ type LedgerSignerMap = {
   [Chain.Dash]: ReturnType<typeof DashLedger>;
   [Chain.Dogecoin]: ReturnType<typeof DogecoinLedger>;
   [Chain.Ethereum]: ReturnType<typeof EthereumLedger>;
+  [Chain.Sepolia]: ReturnType<typeof SepoliaLedger>;
   [Chain.Litecoin]: ReturnType<typeof LitecoinLedger>;
   [Chain.Optimism]: ReturnType<typeof OptimismLedger>;
   [Chain.Polygon]: ReturnType<typeof PolygonLedger>;
@@ -78,6 +80,8 @@ export const getLedgerClient = async <T extends LedgerSupportedChain>({
           return OptimismLedger(params) as LedgerSignerMap[T];
         case Chain.Polygon:
           return PolygonLedger(params) as LedgerSignerMap[T];
+        case Chain.Sepolia:
+          return SepoliaLedger(params) as LedgerSignerMap[T];
         default:
           return EthereumLedger(params) as LedgerSignerMap[T];
       }

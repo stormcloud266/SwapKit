@@ -1,5 +1,6 @@
 import {
   Chain,
+  ChainId,
   ChainToHexChainId,
   type ConnectWalletParams,
   type EVMChain,
@@ -9,6 +10,7 @@ import {
   ensureEVMApiKeys,
   prepareNetworkSwitch,
   setRequestClientConfig,
+  switchEVMWalletNetwork,
 } from "@lastnetwork/helpers";
 import {
   type AVAXToolbox,
@@ -74,10 +76,13 @@ export const getWeb3WalletMethods = async ({
 
   try {
     chain !== Chain.Ethereum &&
+      chain !== Chain.Sepolia &&
       (await addEVMWalletNetwork(
         provider,
         (toolbox as ReturnType<typeof AVAXToolbox>).getNetworkParams(),
       ));
+
+    chain === Chain.Sepolia && (await switchEVMWalletNetwork(provider, ChainId.SepoliaHex));
   } catch (_error) {
     throw new Error(`Failed to add/switch ${chain} network: ${chain}`);
   }

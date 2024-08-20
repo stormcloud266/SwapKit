@@ -174,7 +174,7 @@ export function ensureEVMApiKeys({
   ethplorerApiKey,
 }: { chain: Chain; covalentApiKey?: string; ethplorerApiKey?: string }) {
   const missingKey =
-    chain !== Chain.Ethereum && !covalentApiKey
+    chain !== Chain.Ethereum && chain !== Chain.Sepolia && !covalentApiKey
       ? "covalentApiKey"
       : ethplorerApiKey
         ? undefined

@@ -15,6 +15,8 @@ type CovalentChains =
 export type ChainApis = { [key in CovalentChains]?: CovalentApiType } & {
   [key in Chain.Ethereum]?: EthplorerApiType;
 } & {
+  [key in Chain.Sepolia]?: EthplorerApiType;
+} & {
   [key in UTXOChain]?: BlockchairApiType;
 } & {
   [key in CosmosChain | Chain.Solana | Chain.Radix | Chain.Polkadot]?: string;

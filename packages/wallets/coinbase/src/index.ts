@@ -12,6 +12,7 @@ export const COINBASE_SUPPORTED_CHAINS = [
   Chain.Ethereum,
   Chain.Optimism,
   Chain.Polygon,
+  Chain.Sepolia,
 ] as const;
 
 function connectCoinbaseWallet({

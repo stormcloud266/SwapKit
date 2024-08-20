@@ -23,6 +23,7 @@ export const TREZOR_SUPPORTED_CHAINS = [
   Chain.Litecoin,
   Chain.Optimism,
   Chain.Polygon,
+  Chain.Sepolia,
 ] as const;
 
 type TrezorOptions = {
@@ -68,6 +69,7 @@ async function getToolbox({
     case Chain.Arbitrum:
     case Chain.Optimism:
     case Chain.Polygon:
+    case Chain.Sepolia:
     case Chain.Ethereum: {
       const { getProvider, getToolboxByChain } = await import("@lastnetwork/toolbox-evm");
       const { getEVMSigner } = await import("./evmSigner.ts");

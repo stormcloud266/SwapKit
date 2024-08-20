@@ -32,6 +32,7 @@ import {
   type ETHToolbox,
   type MATICToolbox,
   type OPToolbox,
+  type SEPToolbox,
   toHexString,
 } from "../index.ts";
 import type {
@@ -50,6 +51,7 @@ export const MAX_APPROVAL = MaxInt256;
 
 const baseAssetAddress: Record<EVMChain, string> = {
   [Chain.Arbitrum]: ContractAddress.ARB,
+  [Chain.Sepolia]: ContractAddress.SEP,
   [Chain.Avalanche]: ContractAddress.AVAX,
   [Chain.Base]: ContractAddress.BASE,
   [Chain.BinanceSmartChain]: ContractAddress.BSC,
@@ -649,6 +651,7 @@ export type EVMWalletType = {
   [Chain.Base]: ReturnType<typeof BASEToolbox>;
   [Chain.BinanceSmartChain]: ReturnType<typeof BSCToolbox>;
   [Chain.Ethereum]: ReturnType<typeof ETHToolbox>;
+  [Chain.Sepolia]: ReturnType<typeof SEPToolbox>;
   [Chain.Optimism]: ReturnType<typeof OPToolbox>;
   [Chain.Polygon]: ReturnType<typeof MATICToolbox>;
 };

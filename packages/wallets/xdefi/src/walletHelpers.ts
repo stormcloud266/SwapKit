@@ -60,6 +60,7 @@ export function getXDEFIProvider<T extends Chain>(
     case Chain.Ethereum:
     case Chain.Optimism:
     case Chain.Polygon:
+    case Chain.Sepolia:
       // @ts-expect-error
       return window.xfi.ethereum;
 

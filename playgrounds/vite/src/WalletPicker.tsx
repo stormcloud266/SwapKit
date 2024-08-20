@@ -51,6 +51,7 @@ const AllChainsSupported = [
   Chain.Kujira,
   Chain.THORChain,
   Chain.Solana,
+  Chain.Sepolia,
 ] as WalletChain[];
 
 export const availableChainsByWallet = {
@@ -95,6 +96,7 @@ export const availableChainsByWallet = {
     Chain.Optimism,
     Chain.Arbitrum,
     Chain.Polygon,
+    Chain.Sepolia,
   ],
 
   [WalletOption.WALLETCONNECT]: [
@@ -138,7 +140,7 @@ export const WalletPicker = ({ skClient, setWallet, setPhrase }: Props) => {
   const [chains, setChains] = useState([]);
 
   const connectWallet = useCallback(
-    async (option: WalletOption, provider?: Eip1193Provider) => {
+    (option: WalletOption, provider?: Eip1193Provider) => {
       if (!skClient) return alert("client is not ready");
       switch (option) {
         case WalletOption.COINBASE_WEB:
@@ -150,13 +152,14 @@ export const WalletPicker = ({ skClient, setWallet, setPhrase }: Props) => {
         case WalletOption.TALISMAN:
           // @ts-ignore
           return skClient.connectTalisman(chains);
-        case WalletOption.KEEPKEY: {
-          const derivationPaths = chains.map((chain) => getDerivationPathFor({ chain, index: 0 }));
-
-          await skClient.connectKeepkey?.(chains, derivationPaths);
-          localStorage.setItem("keepkeyApiKey", "1234");
-          return true;
-        }
+        // case WalletOption.KEEPKEY: {
+        //   const derivationPaths = chains.map((chain) =>
+        //     getDerivationPathFor({ chain, index: 0 })
+        //   );
+        // await skClient.connectKeepkey?.(chains, derivationPaths);
+        // localStorage.setItem("keepkeyApiKey", "1234");
+        // return true;
+        // }
         case WalletOption.TREZOR:
         case WalletOption.LEDGER: {
           const [chain] = chains;

@@ -11,7 +11,7 @@ import {
   ensureEVMApiKeys,
   setRequestClientConfig,
 } from "@lastnetwork/helpers";
-import type { ARBToolbox, AVAXToolbox, BSCToolbox } from "@lastnetwork/toolbox-evm";
+import type { ARBToolbox, AVAXToolbox, BSCToolbox, SEPToolbox } from "@lastnetwork/toolbox-evm";
 
 import type { WalletTxParams } from "./walletHelpers.ts";
 import {
@@ -39,6 +39,7 @@ export const XDEFI_SUPPORTED_CHAINS = [
   Chain.Polygon,
   Chain.Solana,
   Chain.THORChain,
+  Chain.Sepolia,
 ] as const;
 
 async function getWalletMethodsForChain({
@@ -100,6 +101,7 @@ async function getWalletMethodsForChain({
     case Chain.BinanceSmartChain:
     case Chain.Ethereum:
     case Chain.Optimism:
+    case Chain.Sepolia:
     case Chain.Polygon: {
       const { prepareNetworkSwitch, addEVMWalletNetwork } = await import("@lastnetwork/helpers");
       const {
@@ -132,6 +134,7 @@ async function getWalletMethodsForChain({
                 | ReturnType<typeof AVAXToolbox>
                 | ReturnType<typeof BSCToolbox>
                 | ReturnType<typeof ARBToolbox>
+                | ReturnType<typeof SEPToolbox>
             ).getNetworkParams(),
           ));
       } catch (_error) {
@@ -142,7 +145,7 @@ async function getWalletMethodsForChain({
       }
 
       const api =
-        chain === Chain.Ethereum
+        chain === Chain.Ethereum || chain === Chain.Sepolia
           ? ethplorerApi(apiKeys.ethplorerApiKey)
           : covalentApi({ apiKey: apiKeys.covalentApiKey, chainId: ChainToChainId[chain] });
 

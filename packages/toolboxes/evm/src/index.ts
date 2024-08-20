@@ -32,3 +32,4 @@ export * from "./toolbox/getToolboxByChain.ts";
 export * from "./toolbox/matic.ts";
 export * from "./toolbox/op.ts";
 export * from "./toolbox/base.ts";
+export * from "./toolbox/sep.ts";
