@@ -1,5 +1,14 @@
 # @swapkit/plugin-evm
 
+## 1.1.5
+
+### Patch Changes
+
+- Updated dependencies [[`33e94bc`](https://github.com/stormcloud266/SwapKit/commit/33e94bc92acd59e3bf31207150518c1862175dd9)]:
+  - @lastnetwork/helpers@1.6.0
+  - @lastnetwork/toolbox-evm@1.3.0
+  - @lastnetwork/api@1.5.5
+
 ## 1.1.4
 
 ### Patch Changes

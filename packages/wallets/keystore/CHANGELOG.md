@@ -1,5 +1,18 @@
 # @swapkit/wallet-keystore
 
+## 1.1.6
+
+### Patch Changes
+
+- Updated dependencies [[`33e94bc`](https://github.com/stormcloud266/SwapKit/commit/33e94bc92acd59e3bf31207150518c1862175dd9)]:
+  - @lastnetwork/helpers@1.6.0
+  - @lastnetwork/toolbox-evm@1.3.0
+  - @lastnetwork/toolbox-cosmos@1.0.24
+  - @lastnetwork/toolbox-radix@1.0.22
+  - @lastnetwork/toolbox-solana@1.0.22
+  - @lastnetwork/toolbox-substrate@1.1.17
+  - @lastnetwork/toolbox-utxo@1.1.5
+
 ## 1.1.5
 
 ### Patch Changes
