@@ -1,5 +1,12 @@
 # @swapkit/toolbox-substrate
 
+## 1.1.17
+
+### Patch Changes
+
+- Updated dependencies [[`33e94bc`](https://github.com/stormcloud266/SwapKit/commit/33e94bc92acd59e3bf31207150518c1862175dd9)]:
+  - @lastnetwork/helpers@1.6.0
+
 ## 1.1.16
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # @swapkit/wallet-evm-extensions
 
+## 1.1.0
+
+### Minor Changes
+
+- [#1](https://github.com/stormcloud266/SwapKit/pull/1) [`33e94bc`](https://github.com/stormcloud266/SwapKit/commit/33e94bc92acd59e3bf31207150518c1862175dd9) Thanks [@stormcloud266](https://github.com/stormcloud266)! - add sepolia support
+
+### Patch Changes
+
+- Updated dependencies [[`33e94bc`](https://github.com/stormcloud266/SwapKit/commit/33e94bc92acd59e3bf31207150518c1862175dd9)]:
+  - @lastnetwork/helpers@1.6.0
+  - @lastnetwork/toolbox-evm@1.3.0
+
 ## 1.0.21
 
 ### Patch Changes

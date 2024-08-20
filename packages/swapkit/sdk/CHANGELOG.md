@@ -1,5 +1,17 @@
 # @swapkit/sdk
 
+## 1.1.23
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @lastnetwork/wallets@1.0.25
+  - @lastnetwork/plugin-chainflip@1.2.4
+  - @lastnetwork/plugin-evm@1.1.5
+  - @lastnetwork/plugin-thorchain@1.1.19
+  - @lastnetwork/api@1.5.5
+  - @lastnetwork/core@1.2.5
+
 ## 1.1.22
 
 ### Patch Changes
