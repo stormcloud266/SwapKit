@@ -1,4 +1,4 @@
-import { Chain, ChainToExplorerUrl, SwapKitError } from "@stormcloud266/helpers";
+import { Chain, ChainToExplorerUrl, SwapKitError } from "@lastnetwork/helpers";
 
 export function getExplorerTxUrl({ chain, txHash }: { txHash: string; chain: Chain }) {
   const baseUrl = ChainToExplorerUrl[chain];

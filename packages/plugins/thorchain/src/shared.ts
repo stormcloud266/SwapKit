@@ -1,4 +1,4 @@
-import { Chain } from "@stormcloud266/helpers";
+import { Chain } from "@lastnetwork/helpers";
 import type { CoreTxParams } from "./types";
 
 export const validateAddressType = ({

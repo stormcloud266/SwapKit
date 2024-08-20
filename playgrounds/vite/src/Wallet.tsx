@@ -1,4 +1,4 @@
-import { type Chain, type FullWallet, SwapKitApi } from "@stormcloud266/sdk";
+import { type Chain, type FullWallet, SwapKitApi } from "@lastnetwork/sdk";
 
 type Props = {
   walletData: FullWallet[Chain];

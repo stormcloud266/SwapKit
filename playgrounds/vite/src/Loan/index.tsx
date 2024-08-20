@@ -1,4 +1,4 @@
-import type { AssetValue } from "@stormcloud266/core";
+import type { AssetValue } from "@lastnetwork/core";
 import { useCallback, useState } from "react";
 import type { SwapKitClient } from "../swapKitClient";
 

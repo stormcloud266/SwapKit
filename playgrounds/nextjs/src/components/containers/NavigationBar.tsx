@@ -1,6 +1,6 @@
 "use client";
 
-import { Chain, CosmosChains, EVMChains, UTXOChains, WalletOption } from "@stormcloud266/helpers";
+import { Chain, CosmosChains, EVMChains, UTXOChains, WalletOption } from "@lastnetwork/helpers";
 import { Power, PowerOff } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

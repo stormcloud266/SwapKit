@@ -98,7 +98,7 @@ export async function swapkitWizard() {
 
   intro(`
   ${bold(inverse("     SwapKit Wizard     "))}
-  ${dim(`@stormcloud266/wizard v${cliVersion}`)}`);
+  ${dim(`@lastnetwork/wizard v${cliVersion}`)}`);
 
   note(`To navigate through the wizard, you can use the following commands:
 - ${underline(bold("↑"))}, ${underline(bold("↓"))}, ${underline(bold("←"))}, and ${underline(bold("→"))} to navigate.
@@ -211,21 +211,21 @@ export async function swapkitWizard() {
   const packageNames: string[] = [];
 
   if (variant === Variant.FULL) {
-    packageNames.push("@stormcloud266/sdk");
+    packageNames.push("@lastnetwork/sdk");
   } else {
     for (const plugin of plugins || []) {
-      packageNames.push(`@stormcloud266/plugin-${plugin}`);
+      packageNames.push(`@lastnetwork/plugin-${plugin}`);
     }
 
     for (const wallet of wallets || []) {
-      packageNames.push(`@stormcloud266/wallet-${wallet}`);
+      packageNames.push(`@lastnetwork/wallet-${wallet}`);
     }
 
-    packageNames.push("@stormcloud266/core");
+    packageNames.push("@lastnetwork/core");
   }
 
   if (enableTokens) {
-    packageNames.push("@stormcloud266/tokens");
+    packageNames.push("@lastnetwork/tokens");
   }
 
   wizardSpinner.message("Copying template files");
@@ -280,7 +280,7 @@ export async function swapkitWizard() {
 
   outro(`
   ${bold(inverse("     SwapKit Wizard     "))}
-  ${dim(`@stormcloud266/wizard v${cliVersion}`)}
+  ${dim(`@lastnetwork/wizard v${cliVersion}`)}
 
   ${green("Variant:")} ${variant === Variant.FULL ? "Full variant" : "Core variant"}
   ${green("Wallets:")} ${wallets ? wallets.join(", ") : variant === Variant.FULL ? "All" : "None"}

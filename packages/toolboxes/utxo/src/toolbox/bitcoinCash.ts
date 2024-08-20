@@ -7,8 +7,8 @@ import {
   // @ts-ignore TODO: check why wallets doesn't see modules included in toolbox
 } from "@psf/bitcoincashjs-lib";
 
+import { Chain, DerivationPath, FeeOption, RPCUrl, type UTXOChain } from "@lastnetwork/helpers";
 import { mnemonicToSeedSync } from "@scure/bip39";
-import { Chain, DerivationPath, FeeOption, RPCUrl, type UTXOChain } from "@stormcloud266/helpers";
 import { Psbt } from "bitcoinjs-lib";
 import { ECPairFactory } from "ecpair";
 

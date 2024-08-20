@@ -7,7 +7,7 @@ import {
   filterAssets,
   formatBigIntToSafeValue,
   isGasAsset,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 import type { BrowserProvider, JsonRpcProvider, Provider } from "ethers";
 
 import {

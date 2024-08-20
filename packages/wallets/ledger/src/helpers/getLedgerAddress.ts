@@ -1,4 +1,4 @@
-import { Chain } from "@stormcloud266/helpers";
+import { Chain } from "@lastnetwork/helpers";
 
 import type { CosmosLedgerClients, EVMLedgerClients, UTXOLedgerClients } from "../types.ts";
 

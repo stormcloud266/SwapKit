@@ -6,7 +6,7 @@
     "@polkadot/keyring": "12.6.2",
     "@polkadot/util": "12.6.2",
     "@polkadot/util-crypto": "12.6.2",
-    "@stormcloud266/helpers": "workspace:*"
+    "@lastnetwork/helpers": "workspace:*"
   },
   "description": "SwapKit - Toolbox substrate",
   "devDependencies": {
@@ -19,7 +19,7 @@
   "homepage": "https://github.com/thorswap/SwapKit",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@stormcloud266/toolbox-substrate",
+  "name": "@lastnetwork/toolbox-substrate",
   "react-native": "./src/index.ts",
   "repository": {
     "type": "git",

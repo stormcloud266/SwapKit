@@ -2,17 +2,17 @@
   "author": "swapkit-oss",
   "description": "SwapKit - Helpers",
   "dependencies": {
-    "@stormcloud266/contracts": "workspace:*",
-    "@stormcloud266/tokens": "workspace:*",
+    "@lastnetwork/contracts": "workspace:*",
+    "@lastnetwork/tokens": "workspace:*",
     "picocolors": "1.0.1"
   },
   "devDependencies": {
-    "@stormcloud266/toolbox-cosmos": "workspace:*",
-    "@stormcloud266/toolbox-evm": "workspace:*",
-    "@stormcloud266/toolbox-solana": "workspace:*",
-    "@stormcloud266/toolbox-radix": "workspace:*",
-    "@stormcloud266/toolbox-substrate": "workspace:*",
-    "@stormcloud266/toolbox-utxo": "workspace:*"
+    "@lastnetwork/toolbox-cosmos": "workspace:*",
+    "@lastnetwork/toolbox-evm": "workspace:*",
+    "@lastnetwork/toolbox-solana": "workspace:*",
+    "@lastnetwork/toolbox-radix": "workspace:*",
+    "@lastnetwork/toolbox-substrate": "workspace:*",
+    "@lastnetwork/toolbox-utxo": "workspace:*"
   },
   "files": [
     "src/",
@@ -21,7 +21,7 @@
   "homepage": "https://github.com/thorswap/SwapKit",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@stormcloud266/helpers",
+  "name": "@lastnetwork/helpers",
   "react-native": "./src/index.ts",
   "repository": {
     "type": "git",

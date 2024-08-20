@@ -1,13 +1,13 @@
 {
   "dependencies": {
     "@scure/bip39": "1.3.0",
-    "@stormcloud266/helpers": "workspace:*",
-    "@stormcloud266/toolbox-cosmos": "workspace:*",
-    "@stormcloud266/toolbox-evm": "workspace:*",
-    "@stormcloud266/toolbox-radix": "workspace:*",
-    "@stormcloud266/toolbox-solana": "workspace:*",
-    "@stormcloud266/toolbox-substrate": "workspace:*",
-    "@stormcloud266/toolbox-utxo": "workspace:*",
+    "@lastnetwork/helpers": "workspace:*",
+    "@lastnetwork/toolbox-cosmos": "workspace:*",
+    "@lastnetwork/toolbox-evm": "workspace:*",
+    "@lastnetwork/toolbox-radix": "workspace:*",
+    "@lastnetwork/toolbox-solana": "workspace:*",
+    "@lastnetwork/toolbox-substrate": "workspace:*",
+    "@lastnetwork/toolbox-utxo": "workspace:*",
     "blakejs": "1.2.1",
     "micro-key-producer": "0.7.0"
   },
@@ -19,7 +19,7 @@
   "homepage": "https://github.com/thorswap/SwapKit",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@stormcloud266/wallet-keystore",
+  "name": "@lastnetwork/wallet-keystore",
   "react-native": "./src/index.ts",
   "repository": {
     "type": "git",

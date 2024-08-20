@@ -1,5 +1,5 @@
-import type { CovalentApiType, EthplorerApiType } from "@stormcloud266/toolbox-evm";
-import type { BlockchairApiType } from "@stormcloud266/toolbox-utxo";
+import type { CovalentApiType, EthplorerApiType } from "@lastnetwork/toolbox-evm";
+import type { BlockchairApiType } from "@lastnetwork/toolbox-utxo";
 
 import type { AssetValue } from "../modules/assetValue";
 import type { Chain, CosmosChain, UTXOChain } from "./chains";

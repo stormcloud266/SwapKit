@@ -1,4 +1,3 @@
-import type { Wallet } from "@passkeys/core";
 import {
   Chain,
   ChainToHexChainId,
@@ -9,15 +8,16 @@ import {
   ensureEVMApiKeys,
   prepareNetworkSwitch,
   setRequestClientConfig,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 import {
   type AVAXToolbox,
   BrowserProvider,
   type Eip1193Provider,
   getProvider,
   getToolboxByChain,
-} from "@stormcloud266/toolbox-evm";
-import { BTCToolbox, Psbt, type UTXOTransferParams } from "@stormcloud266/toolbox-utxo";
+} from "@lastnetwork/toolbox-evm";
+import { BTCToolbox, Psbt, type UTXOTransferParams } from "@lastnetwork/toolbox-utxo";
+import type { Wallet } from "@passkeys/core";
 import {
   AddressPurpose,
   BitcoinNetworkType,

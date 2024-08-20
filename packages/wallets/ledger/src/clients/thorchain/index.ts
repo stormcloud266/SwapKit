@@ -1,5 +1,5 @@
+import { type DerivationPathArray, NetworkDerivationPath } from "@lastnetwork/helpers";
 import { base64 } from "@scure/base";
-import { type DerivationPathArray, NetworkDerivationPath } from "@stormcloud266/helpers";
 
 import { CosmosLedgerInterface } from "../../interfaces/CosmosLedgerInterface.ts";
 import type { GetAddressAndPubKeyResponse } from "../../types.ts";

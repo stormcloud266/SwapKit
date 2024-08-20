@@ -3,9 +3,9 @@
   "dependencies": {
     "@polkadot/util": "12.6.2",
     "@polkadot/util-crypto": "12.6.2",
-    "@stormcloud266/helpers": "workspace:*",
-    "@stormcloud266/toolbox-evm": "workspace:*",
-    "@stormcloud266/toolbox-substrate": "workspace:*"
+    "@lastnetwork/helpers": "workspace:*",
+    "@lastnetwork/toolbox-evm": "workspace:*",
+    "@lastnetwork/toolbox-substrate": "workspace:*"
   },
   "files": [
     "src/",
@@ -14,7 +14,7 @@
   "homepage": "https://github.com/thorswap/SwapKit",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@stormcloud266/wallet-talisman",
+  "name": "@lastnetwork/wallet-talisman",
   "react-native": "./src/index.ts",
   "repository": {
     "type": "git",

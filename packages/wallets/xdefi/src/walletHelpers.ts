@@ -11,16 +11,16 @@ import {
   SwapKitError,
   WalletOption,
   erc20ABI,
-} from "@stormcloud266/helpers";
-import { type TransferParams, getDenom } from "@stormcloud266/toolbox-cosmos";
+} from "@lastnetwork/helpers";
+import { type TransferParams, getDenom } from "@lastnetwork/toolbox-cosmos";
 import type {
   ApproveParams,
   BrowserProvider,
   CallParams,
   EVMTxParams,
   Eip1193Provider,
-} from "@stormcloud266/toolbox-evm";
-import type { SolanaProvider } from "@stormcloud266/toolbox-solana";
+} from "@lastnetwork/toolbox-evm";
+import type { SolanaProvider } from "@lastnetwork/toolbox-solana";
 
 type TransactionMethod = "transfer" | "deposit";
 
@@ -212,7 +212,7 @@ export function cosmosTransfer({
   rpcUrl?: string;
 }) {
   return async ({ from, recipient, assetValue, memo }: TransferParams) => {
-    const { createSigningStargateClient } = await import("@stormcloud266/toolbox-cosmos");
+    const { createSigningStargateClient } = await import("@lastnetwork/toolbox-cosmos");
     // @ts-ignore
     const offlineSigner = window.xfi?.keplr?.getOfflineSignerOnlyAmino(chainId);
     const cosmJS = await createSigningStargateClient(rpcUrl || RPCUrl.Cosmos, offlineSigner);
@@ -247,7 +247,7 @@ export function getXdefiMethods(provider: BrowserProvider) {
         throw new SwapKitError("wallet_xdefi_contract_address_not_provided");
       }
       const { createContract, createContractTxObject, isStateChangingCall, toHexString } =
-        await import("@stormcloud266/toolbox-evm");
+        await import("@lastnetwork/toolbox-evm");
 
       const isStateChanging = isStateChangingCall(abi, funcName);
 
@@ -277,7 +277,7 @@ export function getXdefiMethods(provider: BrowserProvider) {
     },
     approve: async ({ assetAddress, spenderAddress, amount, from }: ApproveParams) => {
       const { MAX_APPROVAL, createContractTxObject, toHexString } = await import(
-        "@stormcloud266/toolbox-evm"
+        "@lastnetwork/toolbox-evm"
       );
       const funcParams = [spenderAddress, BigInt(amount || MAX_APPROVAL)];
       const txOverrides = { from };
@@ -307,7 +307,7 @@ export function getXdefiMethods(provider: BrowserProvider) {
         throw new SwapKitError("wallet_xdefi_send_transaction_no_address");
       }
 
-      const { toHexString } = await import("@stormcloud266/toolbox-evm");
+      const { toHexString } = await import("@lastnetwork/toolbox-evm");
 
       return provider.send("eth_sendTransaction", [
         {

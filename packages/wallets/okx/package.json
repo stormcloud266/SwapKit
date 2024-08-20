@@ -1,10 +1,10 @@
 {
   "description": "SwapKit Wallet - OKX",
   "dependencies": {
-    "@stormcloud266/helpers": "workspace:*",
-    "@stormcloud266/toolbox-cosmos": "workspace:*",
-    "@stormcloud266/toolbox-evm": "workspace:*",
-    "@stormcloud266/toolbox-utxo": "workspace:*"
+    "@lastnetwork/helpers": "workspace:*",
+    "@lastnetwork/toolbox-cosmos": "workspace:*",
+    "@lastnetwork/toolbox-evm": "workspace:*",
+    "@lastnetwork/toolbox-utxo": "workspace:*"
   },
   "files": [
     "src/",
@@ -13,7 +13,7 @@
   "homepage": "https://github.com/thorswap/SwapKit",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
-  "name": "@stormcloud266/wallet-okx",
+  "name": "@lastnetwork/wallet-okx",
   "react-native": "./src/index.ts",
   "repository": {
     "type": "git",

@@ -1,6 +1,6 @@
 "use client";
-import type { AssetValue, QuoteResponseRoute, SwapKit } from "@stormcloud266/sdk";
-import { FeeOption, ProviderName, SwapKitApi, SwapKitNumber } from "@stormcloud266/sdk";
+import type { AssetValue, QuoteResponseRoute, SwapKit } from "@lastnetwork/sdk";
+import { FeeOption, ProviderName, SwapKitApi, SwapKitNumber } from "@lastnetwork/sdk";
 import { useCallback, useState } from "react";
 
 type Props = {

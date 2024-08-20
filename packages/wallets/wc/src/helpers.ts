@@ -1,4 +1,4 @@
-import { Chain, type EVMChain } from "@stormcloud266/helpers";
+import { Chain, type EVMChain } from "@lastnetwork/helpers";
 
 import {
   ARBITRUM_ONE_MAINNET_ID,

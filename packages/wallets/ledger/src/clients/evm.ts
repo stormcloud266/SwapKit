@@ -1,17 +1,17 @@
-import type EthereumApp from "@ledgerhq/hw-app-eth";
 import {
   ChainId,
   type DerivationPathArray,
   NetworkDerivationPath,
   derivationPathToString,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 import {
   AbstractSigner,
   type Provider,
   Signature,
   Transaction,
   type TransactionRequest,
-} from "@stormcloud266/toolbox-evm";
+} from "@lastnetwork/toolbox-evm";
+import type EthereumApp from "@ledgerhq/hw-app-eth";
 
 import { getLedgerTransport } from "../helpers/getLedgerTransport.ts";
 

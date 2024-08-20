@@ -1,5 +1,5 @@
+import { Chain } from "@lastnetwork/helpers";
 import type { PublicKey, SendOptions, Transaction, VersionedTransaction } from "@solana/web3.js";
-import { Chain } from "@stormcloud266/helpers";
 import type { SOLToolbox } from "./toolbox";
 
 type DisplayEncoding = "utf8" | "hex";

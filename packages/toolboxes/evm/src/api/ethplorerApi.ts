@@ -1,4 +1,4 @@
-import { Chain, RequestClient, formatBigIntToSafeValue } from "@stormcloud266/helpers";
+import { Chain, RequestClient, formatBigIntToSafeValue } from "@lastnetwork/helpers";
 
 import type { AddressInfo } from "../types/ethplorer-api-types.ts";
 const baseUrl = "https://api.ethplorer.io";

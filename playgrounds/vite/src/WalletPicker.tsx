@@ -8,12 +8,12 @@ import {
   WalletOption,
   getDerivationPathFor,
   getEIP6963Wallets,
-} from "@stormcloud266/helpers";
-import type { FullWallet } from "@stormcloud266/sdk";
-import { decryptFromKeystore } from "@stormcloud266/wallet-keystore";
+} from "@lastnetwork/helpers";
+import type { FullWallet } from "@lastnetwork/sdk";
+import { decryptFromKeystore } from "@lastnetwork/wallet-keystore";
 import { useCallback, useState } from "react";
 
-import type { Eip1193Provider } from "@stormcloud266/toolbox-evm";
+import type { Eip1193Provider } from "@lastnetwork/toolbox-evm";
 import type { SwapKitClient } from "./swapKitClient";
 
 type Props = {

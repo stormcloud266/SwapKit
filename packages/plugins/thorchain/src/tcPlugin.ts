@@ -1,4 +1,4 @@
-import type { QuoteResponseRoute, QuoteRoute } from "@stormcloud266/api";
+import type { QuoteResponseRoute, QuoteRoute } from "@lastnetwork/api";
 import {
   type AGG_CONTRACT_ADDRESS,
   AGG_SWAP,
@@ -22,7 +22,7 @@ import {
   type UTXOChain,
   getMemoForLoan,
   lowercasedContractAbiMapping,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 
 import { basePlugin } from "./basePlugin.ts";
 import { getSwapInParams } from "./getSwapParams.ts";
@@ -90,7 +90,7 @@ function plugin({ getWallet, stagenet = false }: SwapKitPluginParams) {
         case Chain.BinanceSmartChain:
         case Chain.Avalanche: {
           const wallet = getWallet(chain);
-          const { getChecksumAddressFromAsset } = await import("@stormcloud266/toolbox-evm");
+          const { getChecksumAddressFromAsset } = await import("@lastnetwork/toolbox-evm");
 
           const abi =
             chain === Chain.Avalanche
@@ -288,7 +288,7 @@ function plugin({ getWallet, stagenet = false }: SwapKitPluginParams) {
         throw new SwapKitError("core_wallet_connection_not_found");
       }
 
-      const { getProvider, toChecksumAddress } = await import("@stormcloud266/toolbox-evm");
+      const { getProvider, toChecksumAddress } = await import("@lastnetwork/toolbox-evm");
       const provider = getProvider(evmChain);
       const abi = lowercasedContractAbiMapping[contractAddress.toLowerCase()];
 
@@ -388,6 +388,6 @@ function plugin({ getWallet, stagenet = false }: SwapKitPluginParams) {
 export const ThorchainPlugin = { thorchain: { plugin } } as const;
 
 /**
- * @deprecated Use import { ThorchainPlugin } from "@stormcloud266/plugin-thorchain" instead
+ * @deprecated Use import { ThorchainPlugin } from "@lastnetwork/plugin-thorchain" instead
  */
 export const ThorchainProvider = ThorchainPlugin;

@@ -10,7 +10,7 @@ import {
   type WalletTxParams,
   erc20ABI,
   isGasAsset,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 import type {
   ContractTransaction,
   Fragment,

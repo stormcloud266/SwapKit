@@ -1,4 +1,4 @@
-export * from "@stormcloud266/contracts";
+export * from "@lastnetwork/contracts";
 export * from "./types/index.ts";
 
 /**

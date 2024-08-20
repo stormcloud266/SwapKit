@@ -5,7 +5,7 @@ import {
   CosmosChains,
   EVMChains,
   UTXOChains,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 import { getExplorerAddressUrl, getExplorerTxUrl } from "../helpers/explorerUrls.ts";
 
 describe("Explorer URLs", () => {

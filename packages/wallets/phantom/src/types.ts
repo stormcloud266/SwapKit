@@ -1,4 +1,4 @@
-import type { SolanaProvider } from "@stormcloud266/toolbox-solana";
+import type { SolanaProvider } from "@lastnetwork/toolbox-solana";
 
 declare global {
   interface Window {

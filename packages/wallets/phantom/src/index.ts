@@ -4,7 +4,7 @@ import {
   SwapKitError,
   WalletOption,
   setRequestClientConfig,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 
 function getPhantomProvider() {
   // @ts-ignore
@@ -24,7 +24,7 @@ function connectPhantom({ addChain, config: { thorswapApiKey }, rpcUrls }: Conne
       const connection = await provider.connect();
       const address = connection.publicKey.toString();
 
-      const { SOLToolbox } = await import("@stormcloud266/toolbox-solana");
+      const { SOLToolbox } = await import("@lastnetwork/toolbox-solana");
 
       const walletMethods = SOLToolbox({ rpcUrl: rpcUrls[chain] });
 

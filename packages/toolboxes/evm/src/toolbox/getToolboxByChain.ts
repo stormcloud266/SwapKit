@@ -1,4 +1,4 @@
-import { Chain } from "@stormcloud266/helpers";
+import { Chain } from "@lastnetwork/helpers";
 
 import { ARBToolbox } from "./arb.ts";
 import { AVAXToolbox } from "./avax.ts";

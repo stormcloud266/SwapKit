@@ -1,4 +1,4 @@
-import { Chain } from "@stormcloud266/helpers";
+import { Chain } from "@lastnetwork/helpers";
 
 export const LEDGER_SUPPORTED_CHAINS = [
   Chain.Arbitrum,

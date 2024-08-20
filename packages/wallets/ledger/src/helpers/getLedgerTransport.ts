@@ -1,5 +1,5 @@
+import { SwapKitError } from "@lastnetwork/helpers";
 import type Transport from "@ledgerhq/hw-transport";
-import { SwapKitError } from "@stormcloud266/helpers";
 
 const getNavigatorUsb = () =>
   // @ts-ignore

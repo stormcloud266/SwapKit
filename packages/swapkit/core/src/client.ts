@@ -1,4 +1,4 @@
-import type { QuoteResponseRoute } from "@stormcloud266/api";
+import type { QuoteResponseRoute } from "@lastnetwork/api";
 
 import {
   ApproveMode,
@@ -19,18 +19,18 @@ import {
   type SwapKitWallet,
   type SwapParams,
   type WalletChain,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 import {
   type TransferParams as CosmosTransferParams,
   estimateTransactionFee as cosmosTransactionFee,
   cosmosValidateAddress,
-} from "@stormcloud266/toolbox-cosmos";
+} from "@lastnetwork/toolbox-cosmos";
 import {
   type TransferParams as EVMTransferParams,
   evmValidateAddress,
-} from "@stormcloud266/toolbox-evm";
-import { substrateValidateAddress } from "@stormcloud266/toolbox-substrate";
-import { type UTXOTransferParams, utxoValidateAddress } from "@stormcloud266/toolbox-utxo";
+} from "@lastnetwork/toolbox-evm";
+import { substrateValidateAddress } from "@lastnetwork/toolbox-substrate";
+import { type UTXOTransferParams, utxoValidateAddress } from "@lastnetwork/toolbox-utxo";
 
 import {
   getExplorerAddressUrl as getAddressUrl,
@@ -313,7 +313,7 @@ export function SwapKit<
   }: { chain: Chain; signature: string; message: string; address: string }) {
     switch (chain) {
       case Chain.THORChain: {
-        const { getToolboxByChain } = await import("@stormcloud266/toolbox-cosmos");
+        const { getToolboxByChain } = await import("@lastnetwork/toolbox-cosmos");
         const toolbox = getToolboxByChain(chain);
         return toolbox().verifySignature({ signature, message, address });
       }

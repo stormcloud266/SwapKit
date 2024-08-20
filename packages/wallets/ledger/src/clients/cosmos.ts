@@ -2,7 +2,7 @@ import {
   type DerivationPathArray,
   NetworkDerivationPath,
   derivationPathToString,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 import { CosmosLedgerInterface } from "../interfaces/CosmosLedgerInterface.ts";
 
 export class CosmosLedger extends CosmosLedgerInterface {

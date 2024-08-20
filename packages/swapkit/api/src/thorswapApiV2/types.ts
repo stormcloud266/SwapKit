@@ -5,7 +5,7 @@ import {
   FeeTypeEnum,
   ProviderName,
   WarningCodeEnum,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 import { z } from "zod";
 
 export enum TxnType {

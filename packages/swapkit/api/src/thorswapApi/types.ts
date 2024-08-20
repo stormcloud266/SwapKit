@@ -1,4 +1,4 @@
-import type { Chain, LedgerErrorCode, QuoteMode } from "@stormcloud266/helpers";
+import type { Chain, LedgerErrorCode, QuoteMode } from "@lastnetwork/helpers";
 import { z } from "zod";
 
 export type FeeType = "AFFILIATE" | "LIQUIDITY" | "INBOUND" | "OUTBOUND" | "NETWORK";

@@ -5,9 +5,9 @@ import {
   type DerivationPathArray,
   NetworkDerivationPath,
   derivationPathToString,
-} from "@stormcloud266/helpers";
-import type { JsonRpcProvider, Provider, TransactionRequest } from "@stormcloud266/toolbox-evm";
-import { AbstractSigner } from "@stormcloud266/toolbox-evm";
+} from "@lastnetwork/helpers";
+import type { JsonRpcProvider, Provider, TransactionRequest } from "@lastnetwork/toolbox-evm";
+import { AbstractSigner } from "@lastnetwork/toolbox-evm";
 
 import { bip32ToAddressNList } from "../helpers/coins.ts";
 
@@ -71,7 +71,7 @@ export class KeepKeySigner extends AbstractSigner {
     if (isEIP1559 && !maxPriorityFeePerGas) throw new Error("Missing maxFeePerGas");
     if (!(isEIP1559 || gasPrice)) throw new Error("Missing gasPrice");
 
-    const { toHexString } = await import("@stormcloud266/toolbox-evm");
+    const { toHexString } = await import("@lastnetwork/toolbox-evm");
 
     const nonceValue = nonce
       ? BigInt(nonce)

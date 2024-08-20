@@ -3,7 +3,7 @@ import {
   type ConnectWalletParams,
   WalletOption,
   setRequestClientConfig,
-} from "@stormcloud266/helpers";
+} from "@lastnetwork/helpers";
 import { getWalletForChain } from "./helpers";
 
 const POLKADOT_SUPPORTED_CHAINS = [Chain.Polkadot] as const;

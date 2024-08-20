@@ -1,4 +1,4 @@
-import { AssetValue, RequestClient } from "@stormcloud266/helpers";
+import { AssetValue, RequestClient } from "@lastnetwork/helpers";
 import type {
   InboundAddressesItem,
   LastBlockItem,

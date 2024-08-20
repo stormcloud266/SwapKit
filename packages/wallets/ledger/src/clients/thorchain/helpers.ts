@@ -1,4 +1,4 @@
-import { LedgerErrorCode } from "@stormcloud266/helpers";
+import { LedgerErrorCode } from "@lastnetwork/helpers";
 
 import { CLA, INS, PAYLOAD_TYPE, errorCodeToString, processErrorResponse } from "./common.ts";
 
