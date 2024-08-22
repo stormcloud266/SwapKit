@@ -1,5 +1,12 @@
 # @swapkit/sdk
 
+## 1.1.24
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @lastnetwork/wallets@1.0.26
+
 ## 1.1.23
 
 ### Patch Changes

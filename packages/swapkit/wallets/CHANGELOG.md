@@ -1,5 +1,12 @@
 # @swapkit/wallets
 
+## 1.0.26
+
+### Patch Changes
+
+- Updated dependencies [[`717d048`](https://github.com/stormcloud266/SwapKit/commit/717d0481aebd93f43c0244c9b0ba8095815f1295)]:
+  - @lastnetwork/wallet-xdefi@1.1.1
+
 ## 1.0.25
 
 ### Patch Changes
