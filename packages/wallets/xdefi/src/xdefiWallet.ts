@@ -146,7 +146,7 @@ async function getWalletMethodsForChain({
 
       const api =
         chain === Chain.Ethereum || chain === Chain.Sepolia
-          ? ethplorerApi(apiKeys.ethplorerApiKey)
+          ? ethplorerApi(apiKeys.ethplorerApiKey, chain === Chain.Sepolia)
           : covalentApi({ apiKey: apiKeys.covalentApiKey, chainId: ChainToChainId[chain] });
 
       return prepareNetworkSwitch({
