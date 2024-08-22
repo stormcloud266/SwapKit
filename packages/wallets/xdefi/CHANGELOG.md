@@ -1,5 +1,11 @@
 # @swapkit/wallet-xdefi
 
+## 1.1.1
+
+### Patch Changes
+
+- [#6](https://github.com/stormcloud266/SwapKit/pull/6) [`717d048`](https://github.com/stormcloud266/SwapKit/commit/717d0481aebd93f43c0244c9b0ba8095815f1295) Thanks [@stormcloud266](https://github.com/stormcloud266)! - use sepolia ethplorer in xdefi
+
 ## 1.1.0
 
 ### Minor Changes
