@@ -1,5 +1,17 @@
 # @swapkit/wallet-evm-extensions
 
+## 1.2.0
+
+### Minor Changes
+
+- [#9](https://github.com/stormcloud266/SwapKit/pull/9) [`667e9a8`](https://github.com/stormcloud266/SwapKit/commit/667e9a84fa1fd87fc886b22e4bab3182a5e61ad7) Thanks [@stormcloud266](https://github.com/stormcloud266)! - update with upstream
+
+### Patch Changes
+
+- Updated dependencies [[`667e9a8`](https://github.com/stormcloud266/SwapKit/commit/667e9a84fa1fd87fc886b22e4bab3182a5e61ad7)]:
+  - @lastnetwork/helpers@1.11.0
+  - @lastnetwork/toolbox-evm@1.5.0
+
 ## 1.1.6
 
 ### Patch Changes

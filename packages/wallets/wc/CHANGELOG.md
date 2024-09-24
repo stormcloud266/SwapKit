@@ -1,5 +1,18 @@
 # @swapkit/wallet-wc
 
+## 1.4.0
+
+### Minor Changes
+
+- [#9](https://github.com/stormcloud266/SwapKit/pull/9) [`667e9a8`](https://github.com/stormcloud266/SwapKit/commit/667e9a84fa1fd87fc886b22e4bab3182a5e61ad7) Thanks [@stormcloud266](https://github.com/stormcloud266)! - update with upstream
+
+### Patch Changes
+
+- Updated dependencies [[`667e9a8`](https://github.com/stormcloud266/SwapKit/commit/667e9a84fa1fd87fc886b22e4bab3182a5e61ad7)]:
+  - @lastnetwork/toolbox-cosmos@1.4.0
+  - @lastnetwork/helpers@1.11.0
+  - @lastnetwork/toolbox-evm@1.5.0
+
 ## 1.0.24
 
 ### Patch Changes
@@ -8,6 +21,7 @@
   - @lastnetwork/helpers@1.6.0
   - @lastnetwork/toolbox-evm@1.3.0
   - @lastnetwork/toolbox-cosmos@1.0.24
+
 ## 1.3.6
 
 ### Patch Changes
