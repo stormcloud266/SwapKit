@@ -29,18 +29,19 @@ import {
   type TransferParams as EVMTransferParams,
   evmValidateAddress,
 } from "@lastnetwork/toolbox-evm";
+import { validateAddress as validateRadixAddress } from "@lastnetwork/toolbox-radix";
 import { substrateValidateAddress } from "@lastnetwork/toolbox-substrate";
 import { type UTXOTransferParams, utxoValidateAddress } from "@lastnetwork/toolbox-utxo";
 
 import {
   getExplorerAddressUrl as getAddressUrl,
   getExplorerTxUrl as getTxUrl,
-} from "./helpers/explorerUrls.ts";
+} from "./helpers/explorerUrls";
 
 type PluginsType = {
   [key in string]: {
-    plugin: (params: SwapKitPluginParams<NotWorth>) => NotWorth;
-    config?: NotWorth;
+    plugin: (params: SwapKitPluginParams<any>) => any;
+    config?: any;
   };
 };
 
@@ -56,7 +57,7 @@ export type SwapKitParams<P, W> = {
 
 export function SwapKit<
   Plugins extends PluginsType,
-  Wallets extends { [key in string]: SwapKitWallet<NotWorth[]> },
+  Wallets extends { [key in string]: SwapKitWallet<any[]> },
 >({
   apis = {},
   config = {},
@@ -240,6 +241,9 @@ export function SwapKit<
       case Chain.Polkadot:
         return substrateValidateAddress({ address, chain });
 
+      case Chain.Radix:
+        return validateRadixAddress(address);
+
       default:
         return false;
     }
@@ -254,7 +258,6 @@ export function SwapKit<
     }
 
     if ("getBalance" in wallet) {
-      // @ts-expect-error TODO add getBalance to radix
       const balance = await wallet.getBalance(wallet.address, potentialScamFilter);
       wallet.balance = balance?.length ? balance : defaultBalance;
     }

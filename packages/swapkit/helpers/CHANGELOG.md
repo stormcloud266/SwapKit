@@ -1,10 +1,104 @@
 # @swapkit/helpers
 
+## 1.10.3
+
+### Patch Changes
+
+- Updated dependencies [[`b1e83e1`](https://github.com/thorswap/SwapKit/commit/b1e83e174b64d786d9eec5ed13cb57a28d6fb6a1)]:
+  - @swapkit/tokens@1.8.0
+
+## 1.10.2
+
+### Patch Changes
+
+- [#1003](https://github.com/thorswap/SwapKit/pull/1003) [`48c9de2`](https://github.com/thorswap/SwapKit/commit/48c9de28fe00579f6a909899ed831a870f1d2d14) Thanks [@0xepicode](https://github.com/0xepicode)! - New error type for missing payout address in preferred asset
+
+## 1.10.1
+
+### Patch Changes
+
+- [`07d7912`](https://github.com/thorswap/SwapKit/commit/07d791292c5aeff4a42798f2e17b77ad974fcae3) Thanks [@towanTG](https://github.com/towanTG)! - Adds new error code
+
+## 1.10.0
+
+### Minor Changes
+
+- [#987](https://github.com/thorswap/SwapKit/pull/987) [`5769956`](https://github.com/thorswap/SwapKit/commit/5769956c9e7ee97efaff9cc6408671fb3effd0b5) Thanks [@towanTG](https://github.com/towanTG)! - Fixes some issues with radix wallet on mobile connect and simplifies code
+
+### Patch Changes
+
+- Updated dependencies [[`5769956`](https://github.com/thorswap/SwapKit/commit/5769956c9e7ee97efaff9cc6408671fb3effd0b5)]:
+  - @swapkit/tokens@1.7.0
+
+## 1.9.0
+
+### Minor Changes
+
+- [#968](https://github.com/thorswap/SwapKit/pull/968) [`7171296`](https://github.com/thorswap/SwapKit/commit/71712965668f9ca73368997a3f1e8c22d1276fe0) Thanks [@towanTG](https://github.com/towanTG)! - Fixes Radix Toolbox and adapts the Radix Wallet integration
+
+### Patch Changes
+
+- [#980](https://github.com/thorswap/SwapKit/pull/980) [`114a9d7`](https://github.com/thorswap/SwapKit/commit/114a9d709b88efa979ed3099062980fdbeed9c7d) Thanks [@ice-chillios](https://github.com/ice-chillios)! - Fix external TS declarations
+
+- [#986](https://github.com/thorswap/SwapKit/pull/986) [`b167101`](https://github.com/thorswap/SwapKit/commit/b167101ae3898734d91ac43accbc2d1e207cc1b1) Thanks [@towanTG](https://github.com/towanTG)! - Fixes Kuji send and synth asset value symbol
+
+- Updated dependencies [[`114a9d7`](https://github.com/thorswap/SwapKit/commit/114a9d709b88efa979ed3099062980fdbeed9c7d), [`7171296`](https://github.com/thorswap/SwapKit/commit/71712965668f9ca73368997a3f1e8c22d1276fe0)]:
+  - @swapkit/contracts@1.0.5
+  - @swapkit/tokens@1.6.0
+
+## 1.8.0
+
+### Minor Changes
+
+- [#977](https://github.com/thorswap/SwapKit/pull/977) [`5d44a3c`](https://github.com/thorswap/SwapKit/commit/5d44a3c48dd458ce4f1265934a9f87eabbc7886a) Thanks [@towanTG](https://github.com/towanTG)! - Supports new chainId for THORChain after hard fork 2.135.0
+
+### Patch Changes
+
+- Updated dependencies [[`5d44a3c`](https://github.com/thorswap/SwapKit/commit/5d44a3c48dd458ce4f1265934a9f87eabbc7886a)]:
+  - @swapkit/tokens@1.5.0
+
+## 1.7.1
+
+### Patch Changes
+
+- [#974](https://github.com/thorswap/SwapKit/pull/974) [`17f28d9`](https://github.com/thorswap/SwapKit/commit/17f28d901f35116960766f8c872a91baac67bd6a) Thanks [@towanTG](https://github.com/towanTG)! - Fixes dynamic ChainId for SSR apps
+
+## 1.7.0
+
+### Minor Changes
+
+- [#972](https://github.com/thorswap/SwapKit/pull/972) [`97b8d3f`](https://github.com/thorswap/SwapKit/commit/97b8d3fe31987cd0813c847159b8127087dada10) Thanks [@anthon-dev](https://github.com/anthon-dev)! - Adds dynamic THORChain chain id to be working throughout a hardfork
+
+### Patch Changes
+
+- Updated dependencies [[`97b8d3f`](https://github.com/thorswap/SwapKit/commit/97b8d3fe31987cd0813c847159b8127087dada10)]:
+  - @swapkit/tokens@1.4.0
+
+## 1.6.3
+
+### Patch Changes
+
+- [#970](https://github.com/thorswap/SwapKit/pull/970) [`59447e0`](https://github.com/thorswap/SwapKit/commit/59447e00ea8f32e30fbd61b9aa6e07314b42d6b6) Thanks [@towanTG](https://github.com/towanTG)! - Fixes AssetValue set for synths
+
+## 1.6.2
+
+### Patch Changes
+
+- [#962](https://github.com/thorswap/SwapKit/pull/962) [`241d95f`](https://github.com/thorswap/SwapKit/commit/241d95fe407f76cebe3cebddbe594943a3be7e12) Thanks [@towanTG](https://github.com/towanTG)! - Fixes Kuji cosmjs initiation
+
+## 1.6.1
+
+### Patch Changes
+
+- Updated dependencies [[`bea3d9f`](https://github.com/thorswap/SwapKit/commit/bea3d9ff5ba7135033f372438739050ddead7ef0)]:
+  - @swapkit/tokens@1.3.0
+
 ## 1.6.0
 
 ### Minor Changes
 
 - [#1](https://github.com/stormcloud266/SwapKit/pull/1) [`33e94bc`](https://github.com/stormcloud266/SwapKit/commit/33e94bc92acd59e3bf31207150518c1862175dd9) Thanks [@stormcloud266](https://github.com/stormcloud266)! - add sepolia support
+- [`9277d7e`](https://github.com/thorswap/SwapKit/commit/9277d7eb7727fb71cf0eeb427002be6633b8a044) Thanks [@chillios-dev](https://github.com/chillios-dev)! - New chain - BASE
 
 ## 1.5.1
 

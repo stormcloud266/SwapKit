@@ -1,5 +1,5 @@
 import { SwapKitApi } from "@lastnetwork/api";
-import { Chain } from "@lastnetwork/helpers";
+import { Chain, ChainId, ProviderName } from "@lastnetwork/helpers";
 
 function parseChain(chain: string) {
   if (chain === "ARBITRUM") return Chain.Arbitrum;
@@ -13,15 +13,22 @@ function parseIdentifier(identifier: string) {
   return identifier;
 }
 
-const providers = (await SwapKitApi.getTokenListProvidersV2()).filter(
-  (provider) => provider.provider !== "THORCHAIN_STREAMING",
+const providers = (await SwapKitApi.getTokenListProvidersV2(true)).filter(
+  (provider) =>
+    ![ProviderName.THORCHAIN_STREAMING, ProviderName.MAYACHAIN_STREAMING].includes(
+      provider.provider,
+    ),
 );
+
+console.info(providers);
 
 console.info(
   `🚀 Fetching token lists from ${providers.length} providers:\n${providers
     .map(({ provider }) => provider)
     .join("\n-")}`,
 );
+
+const thorchainChainId = ChainId.THORChain;
 
 for (const { provider } of providers) {
   try {
@@ -34,7 +41,8 @@ for (const { provider } of providers) {
       .map((token) => ({
         address: token.address,
         chain: parseChain(token.chain),
-        chainId: token.chainId,
+        // TODO remove after fork
+        chainId: token.chainId === "thorchain-mainnet-v1" ? thorchainChainId : token.chainId,
         decimals: token.decimals,
         identifier: parseIdentifier(token.identifier),
         logoURI: token.logoURI,

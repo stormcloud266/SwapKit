@@ -6,6 +6,7 @@
     "@lastnetwork/plugin-evm": "workspace:*",
     "@lastnetwork/toolbox-cosmos": "workspace:*",
     "@lastnetwork/toolbox-evm": "workspace:*",
+    "@lastnetwork/toolbox-radix": "workspace:*",
     "@lastnetwork/toolbox-solana": "workspace:*",
     "@lastnetwork/toolbox-substrate": "workspace:*",
     "@lastnetwork/toolbox-utxo": "workspace:*"
@@ -27,12 +28,12 @@
   "scripts": {
     "build": "bun run ./build.ts",
     "clean": "rm -rf dist node_modules *.tsbuildinfo",
-    "lint": "biome check --write ./src",
+    "lint": "biome check --diagnostic-level=error --write ./src",
     "test": "echo 'bun test'",
     "test:coverage": "bun test --coverage",
     "type-check": "tsc --noEmit"
   },
   "type": "module",
   "types": "./src/index.ts",
-  "version": "1.2.5"
+  "version": "1.4.4"
 }

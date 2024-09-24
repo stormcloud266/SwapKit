@@ -4,14 +4,14 @@ import { type ChainId, SwapKitError } from "@lastnetwork/helpers";
 import { base64, bech32 } from "@scure/base";
 
 import { stringToPath } from "@cosmjs/crypto";
-import type { CosmosSDKClientParams, TransferParams } from "./types.ts";
+import type { CosmosSDKClientParams, TransferParams } from "./types";
 import {
   DEFAULT_COSMOS_FEE_MAINNET,
   createSigningStargateClient,
   createStargateClient,
   getDenom,
   getRPC,
-} from "./util.ts";
+} from "./util";
 
 export class CosmosClient {
   server: string;

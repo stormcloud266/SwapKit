@@ -55,7 +55,7 @@ export enum ChainId {
   Radix = "radix-mainnet",
   Sepolia = "11155111",
   SepoliaHex = "0xaa36a7",
-  THORChain = "thorchain-mainnet-v1",
+  THORChain = "thorchain-1",
   THORChainStagenet = "thorchain-stagenet-v2",
   Solana = "solana",
 }

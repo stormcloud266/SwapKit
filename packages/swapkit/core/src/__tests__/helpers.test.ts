@@ -6,7 +6,7 @@ import {
   EVMChains,
   UTXOChains,
 } from "@lastnetwork/helpers";
-import { getExplorerAddressUrl, getExplorerTxUrl } from "../helpers/explorerUrls.ts";
+import { getExplorerAddressUrl, getExplorerTxUrl } from "../helpers/explorerUrls";
 
 describe("Explorer URLs", () => {
   describe("CosmosChains", () => {

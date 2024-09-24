@@ -2,7 +2,7 @@ import { type Chain, type FullWallet, SwapKitApi } from "@lastnetwork/sdk";
 
 type Props = {
   walletData: FullWallet[Chain];
-  setAsset: (asset: Todo) => void;
+  setAsset: (asset: any) => void;
   disconnect: () => void;
 };
 

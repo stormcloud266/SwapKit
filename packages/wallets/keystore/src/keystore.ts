@@ -4,7 +4,6 @@ import {
   type ConnectWalletParams,
   DerivationPath,
   type DerivationPathArray,
-  RPCUrl,
   type WalletChain,
   WalletOption,
   type WalletTxParams,
@@ -29,7 +28,7 @@ type KeystoreOptions = {
 };
 
 type Params = KeystoreOptions & {
-  api?: Todo;
+  api?: any;
   rpcUrl?: string;
   chain: Chain;
   phrase: string;
@@ -169,18 +168,6 @@ const getWalletMethodsForChain = async ({
       const toolbox = await getToolboxByChain(chain, { signer });
 
       return { address: signer.address, walletMethods: toolbox };
-    }
-
-    case Chain.Radix: {
-      const { getRadixCoreApiClient, RadixToolbox, createPrivateKey, RadixMainnet } = await import(
-        "@lastnetwork/toolbox-radix"
-      );
-
-      const api = await getRadixCoreApiClient(RPCUrl.Radix, RadixMainnet);
-      const signer = await createPrivateKey(phrase);
-      const toolbox = await RadixToolbox({ api, signer });
-
-      return { address: toolbox.getAddress(), walletMethods: toolbox };
     }
 
     case Chain.Solana: {

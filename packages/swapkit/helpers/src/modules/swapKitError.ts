@@ -58,6 +58,7 @@ const errorCodes = {
   core_transaction_deposit_server_error: 10314,
   core_transaction_user_rejected: 10315,
   core_transaction_failed: 10316,
+  core_transaction_invalid_recipient_address: 10317,
   /**
    * Wallets
    */
@@ -86,6 +87,8 @@ const errorCodes = {
   wallet_talisman_not_enabled: 20601,
   wallet_talisman_not_found: 20602,
   wallet_polkadot_not_found: 20701,
+  wallet_radix_not_found: 20801,
+  wallet_radix_transaction_failed: 20802,
   /**
    * Chainflip
    */
@@ -107,6 +110,7 @@ const errorCodes = {
   thorchain_swapin_vault_required: 40101,
   thorchain_swapin_memo_required: 40102,
   thorchain_swapin_token_required: 40103,
+  thorchain_preferred_asset_payout_required: 40104,
   /**
    * SwapKit API
    */
@@ -130,6 +134,7 @@ const errorCodes = {
   toolbox_evm_provider_not_eip1193_compatible: 90210,
   toolbox_evm_error_estimating_gas_limit: 90211,
   toolbox_evm_error_sending_transaction: 90212,
+  toolbox_radix_signer_not_defined: 90301,
   /**
    * Helpers
    */
@@ -153,8 +158,8 @@ export class SwapKitError extends Error {
   static ErrorCode = errorCodes;
 
   constructor(
-    errorOrErrorKey: ErrorKeys | { errorKey: ErrorKeys; info?: Record<string, NotWorth> },
-    sourceError?: NotWorth,
+    errorOrErrorKey: ErrorKeys | { errorKey: ErrorKeys; info?: Record<string, any> },
+    sourceError?: any,
   ) {
     const isErrorString = typeof errorOrErrorKey === "string";
 

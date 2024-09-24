@@ -15,7 +15,7 @@ import {
   encodeAddress as encodePolkadotAddress,
 } from "@polkadot/util-crypto";
 
-import { Network, type SubstrateNetwork } from "../types/network.ts";
+import { Network, type SubstrateNetwork } from "../types/network";
 
 // TODO combine this type with the more general SK type
 type SubstrateTransferParams = {

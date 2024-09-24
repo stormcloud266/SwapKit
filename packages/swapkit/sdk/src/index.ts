@@ -1,6 +1,7 @@
 import { SwapKit, type SwapKitParams } from "@lastnetwork/core";
 import { ChainflipPlugin } from "@lastnetwork/plugin-chainflip";
 import { EVMPlugin } from "@lastnetwork/plugin-evm";
+import { RadixPlugin } from "@lastnetwork/plugin-radix";
 import { MayachainPlugin, ThorchainPlugin } from "@lastnetwork/plugin-thorchain";
 import { wallets as defaultWallets } from "@lastnetwork/wallets";
 
@@ -12,6 +13,7 @@ const defaultPlugins = {
   ...EVMPlugin,
   ...MayachainPlugin,
   ...ThorchainPlugin,
+  ...RadixPlugin,
 };
 
 export const createSwapKit = <P extends typeof defaultPlugins, W extends typeof defaultWallets>({

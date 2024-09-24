@@ -5,9 +5,9 @@ import {
   getChainIdentifier,
 } from "@lastnetwork/helpers";
 
-import { getTokenListProvidersV2 } from "../thorswapApiV2/endpoints.ts";
-import type { TokenListProvidersResponse } from "../thorswapApiV2/types.ts";
-import type { TokensResponse } from "./types.ts";
+import { getTokenListProvidersV2 } from "../thorswapApiV2/endpoints";
+import type { TokenListProvidersResponse } from "../thorswapApiV2/types";
+import type { TokensResponse } from "./types";
 
 const baseUrl = "https://static.thorswap.net";
 

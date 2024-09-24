@@ -1,4 +1,4 @@
-import type { CoinbaseWalletSDKOptions } from "@coinbase/wallet-sdk/dist/CoinbaseWalletSDK.js";
+import type { CoinbaseWalletSDKOptions } from "@coinbase/wallet-sdk/dist/CoinbaseWalletSDK";
 import { setRequestClientConfig } from "@lastnetwork/helpers";
 import { Chain, type ConnectWalletParams, WalletOption } from "@lastnetwork/helpers";
 

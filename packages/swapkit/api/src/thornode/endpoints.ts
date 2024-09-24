@@ -8,7 +8,7 @@ import type {
   RunePoolProviderInfo,
   THORNodeTNSDetails,
   ThornodeEndpointParams,
-} from "./types.ts";
+} from "./types";
 
 function baseUrl({ type = "thorchain", stagenet = false }: ThornodeEndpointParams = {}) {
   switch (type) {
@@ -21,6 +21,15 @@ function baseUrl({ type = "thorchain", stagenet = false }: ThornodeEndpointParam
         ? "https://stagenet-thornode.ninerealms.com/thorchain"
         : "https://thornode.thorswap.net/thorchain";
   }
+}
+
+function getNameServiceBaseUrl({
+  type = "thorchain",
+  stagenet = false,
+}: ThornodeEndpointParams = {}) {
+  const nsType = type === "mayachain" ? "mayaname" : "thorname";
+
+  return `${baseUrl({ type, stagenet })}/${nsType}`;
 }
 
 export function getLastBlock(params?: ThornodeEndpointParams) {
@@ -44,7 +53,7 @@ export function getInboundAddresses(params?: ThornodeEndpointParams) {
 }
 
 export function getTHORNodeTNSDetails(params: ThornodeEndpointParams & { name: string }) {
-  return RequestClient.get<THORNodeTNSDetails>(`${baseUrl(params)}/thorname/${params.name}`);
+  return RequestClient.get<THORNodeTNSDetails>(`${getNameServiceBaseUrl(params)}/${params.name}`);
 }
 
 export async function getTNSPreferredAsset(tns: string) {

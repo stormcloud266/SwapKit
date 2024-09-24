@@ -1,6 +1,5 @@
 import {
   Chain,
-  ChainId,
   ChainToHexChainId,
   type ConnectWalletParams,
   type EVMChain,
@@ -10,7 +9,6 @@ import {
   ensureEVMApiKeys,
   prepareNetworkSwitch,
   setRequestClientConfig,
-  switchEVMWalletNetwork,
 } from "@lastnetwork/helpers";
 import {
   type AVAXToolbox,
@@ -23,7 +21,7 @@ declare const window: {
   ethereum: EthereumWindowProvider;
   trustwallet: EthereumWindowProvider;
   coinbaseWalletExtension: EthereumWindowProvider;
-  braveSolana: Todo;
+  braveSolana: any;
 } & Window;
 
 export type EVMWalletOptions =
@@ -74,17 +72,23 @@ export const getWeb3WalletMethods = async ({
 
   const toolbox = getToolboxByChain(chain)({ ...keys, provider, signer });
 
-  try {
-    chain !== Chain.Ethereum &&
-      chain !== Chain.Sepolia &&
-      (await addEVMWalletNetwork(
-        provider,
-        (toolbox as ReturnType<typeof AVAXToolbox>).getNetworkParams(),
-      ));
-
-    chain === Chain.Sepolia && (await switchEVMWalletNetwork(provider, ChainId.SepoliaHex));
-  } catch (_error) {
-    throw new Error(`Failed to add/switch ${chain} network: ${chain}`);
+  if (chain !== Chain.Ethereum && chain !== Chain.Sepolia) {
+    const currentNetwork = await provider.getNetwork();
+    /**
+     * if the selected network is other than Ethereum e.g. Arbitrum
+     * and if the selected network is the current network e.g. Arbitrum on MetaMask
+     * addEVMWalletNetwork is redundant and also throws an error failing the connection
+     */
+    if (currentNetwork.chainId.toString() !== ChainToHexChainId[chain]) {
+      try {
+        await addEVMWalletNetwork(
+          provider,
+          (toolbox as ReturnType<typeof AVAXToolbox>).getNetworkParams(),
+        );
+      } catch (_error) {
+        throw new Error(`Failed to add/switch ${chain} network: ${chain}`);
+      }
+    }
   }
 
   return prepareNetworkSwitch<typeof toolbox>({
@@ -153,8 +157,16 @@ function connectEVMWallet({
       const getBalance = async (potentialScamFilter = true) =>
         walletMethods.getBalance(address, potentialScamFilter, getProvider(chain));
 
+      const disconnect = () =>
+        web3provider.send("wallet_revokePermissions", [
+          {
+            eth_accounts: {},
+          },
+        ]);
+
       addChain({
         ...walletMethods,
+        disconnect,
         chain,
         address,
         getBalance,

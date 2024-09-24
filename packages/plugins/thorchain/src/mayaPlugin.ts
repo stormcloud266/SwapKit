@@ -13,9 +13,9 @@ import {
   type SwapParams,
   type UTXOChain,
 } from "@lastnetwork/helpers";
-import { basePlugin } from "./basePlugin.ts";
-import { prepareTxParams, validateAddressType } from "./shared.ts";
-import type { AddLiquidityParams, CoreTxParams, CreateLiquidityParams } from "./types.ts";
+import { basePlugin } from "./basePlugin";
+import { prepareTxParams, validateAddressType } from "./shared";
+import type { AddLiquidityParams, CoreTxParams, CreateLiquidityParams } from "./types";
 
 type SupportedChain = EVMChain | CosmosChain | UTXOChain;
 
@@ -39,7 +39,7 @@ function plugin({ getWallet, stagenet = false }: SwapKitPluginParams) {
     recipient,
     router,
     ...rest
-  }: CoreTxParams & { router?: string }) {
+  }: CoreTxParams & { router?: string; destinationChain?: Chain }) {
     const { chain, symbol, ticker } = assetValue;
 
     const wallet = getWallet(chain as SupportedChain);
@@ -49,7 +49,8 @@ function plugin({ getWallet, stagenet = false }: SwapKitPluginParams) {
 
     const address = wallet.address;
 
-    const isAddressValidated = validateAddressType({ address, chain });
+    const isAddressValidated = validateAddressType({ address: wallet.address, chain });
+
     if (!isAddressValidated) {
       throw new SwapKitError("core_transaction_invalid_sender_address");
     }
@@ -137,6 +138,15 @@ function plugin({ getWallet, stagenet = false }: SwapKitPluginParams) {
 
     if (!assetValue) {
       throw new SwapKitError("core_swap_asset_not_recognized");
+    }
+
+    const isRecipientValidated = validateAddressType({
+      address: route.destinationAddress,
+      chain: AssetValue.from({ asset: route.buyAsset }).chain,
+    });
+
+    if (!isRecipientValidated) {
+      throw new SwapKitError("core_transaction_invalid_recipient_address");
     }
 
     const { address: recipient } = await getInboundDataByChain(evmChain);

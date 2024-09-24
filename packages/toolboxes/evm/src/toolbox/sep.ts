@@ -1,11 +1,11 @@
 import { BaseDecimal, Chain, type FeeOption } from "@lastnetwork/helpers";
 import type { BrowserProvider, JsonRpcProvider, JsonRpcSigner, Signer } from "ethers";
 
-import type { EthplorerApiType } from "../api/ethplorerApi.ts";
-import { ethplorerApi } from "../api/ethplorerApi.ts";
-import { type EVMTxBaseParams, estimateTransactionFee, getBalance } from "../index.ts";
+import type { EthplorerApiType } from "../api/ethplorerApi";
+import { ethplorerApi } from "../api/ethplorerApi";
+import { type EVMTxBaseParams, estimateTransactionFee, getBalance } from "../index";
 
-import { EVMToolbox } from "./EVMToolbox.ts";
+import { EVMToolbox } from "./EVMToolbox";
 
 const getNetworkParams = () => ({
   chainId: "0xaa36a7",

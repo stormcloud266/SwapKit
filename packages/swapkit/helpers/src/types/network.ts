@@ -21,7 +21,7 @@ export enum RPCUrl {
   Sepolia = "https://native-amm.vercel.app/rpc/sepolia",
   THORChain = "https://rpc.thorswap.net",
   THORChainStagenet = "https://stagenet-rpc.ninerealms.com",
-  Solana = "https://mainnet.helius-rpc.com/?api-key=2cbe3ae6-cfc5-4141-a093-0055d0fa3d80",
+  Solana = "https://mainnet.helius-rpc.com",
 }
 
 export enum ExplorerUrl {
