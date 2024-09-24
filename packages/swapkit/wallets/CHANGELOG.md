@@ -1,5 +1,30 @@
 # @swapkit/wallets
 
+## 1.3.0
+
+### Minor Changes
+
+- [#9](https://github.com/stormcloud266/SwapKit/pull/9) [`667e9a8`](https://github.com/stormcloud266/SwapKit/commit/667e9a84fa1fd87fc886b22e4bab3182a5e61ad7) Thanks [@stormcloud266](https://github.com/stormcloud266)! - update with upstream
+
+### Patch Changes
+
+- Updated dependencies [[`667e9a8`](https://github.com/stormcloud266/SwapKit/commit/667e9a84fa1fd87fc886b22e4bab3182a5e61ad7)]:
+  - @lastnetwork/wallet-evm-extensions@1.2.0
+  - @lastnetwork/wallet-polkadotjs@1.1.0
+  - @lastnetwork/wallet-coinbase@1.2.0
+  - @lastnetwork/wallet-keystore@1.3.0
+  - @lastnetwork/wallet-talisman@1.3.0
+  - @lastnetwork/wallet-keepkey@1.4.0
+  - @lastnetwork/wallet-phantom@1.2.0
+  - @lastnetwork/wallet-exodus@1.3.0
+  - @lastnetwork/wallet-ledger@1.4.0
+  - @lastnetwork/wallet-trezor@1.2.0
+  - @lastnetwork/wallet-keplr@1.1.0
+  - @lastnetwork/wallet-radix@1.3.0
+  - @lastnetwork/wallet-xdefi@1.2.0
+  - @lastnetwork/wallet-okx@1.2.0
+  - @lastnetwork/wallet-wc@1.4.0
+
 ## 1.2.6
 
 ### Patch Changes
