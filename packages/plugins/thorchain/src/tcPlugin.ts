@@ -24,16 +24,16 @@ import {
   lowercasedContractAbiMapping,
 } from "@lastnetwork/helpers";
 
-import { basePlugin } from "./basePlugin.ts";
-import { getSwapInParams } from "./getSwapParams.ts";
-import { prepareTxParams, validateAddressType } from "./shared.ts";
+import { basePlugin } from "./basePlugin";
+import { getSwapInParams } from "./getSwapParams";
+import { prepareTxParams, validateAddressType } from "./shared";
 import type {
   AddLiquidityParams,
   CoreTxParams,
   CreateLiquidityParams,
   LoanParams,
   SwapWithRouteParams,
-} from "./types.ts";
+} from "./types";
 
 type SupportedChain = EVMChain | Chain.THORChain | UTXOChain | Chain.Cosmos;
 
@@ -67,6 +67,7 @@ function plugin({ getWallet, stagenet = false }: SwapKitPluginParams) {
     }
 
     const isAddressValidated = validateAddressType({ address: wallet.address, chain });
+
     if (!isAddressValidated) {
       throw new SwapKitError("core_transaction_invalid_sender_address");
     }
@@ -328,6 +329,15 @@ function plugin({ getWallet, stagenet = false }: SwapKitPluginParams) {
 
     if (!assetValue) {
       throw new SwapKitError("core_swap_asset_not_recognized");
+    }
+
+    const isRecipientValidated = validateAddressType({
+      address: route.destinationAddress,
+      chain: AssetValue.from({ asset: route.buyAsset }).chain,
+    });
+
+    if (!isRecipientValidated) {
+      throw new SwapKitError("core_transaction_invalid_recipient_address");
     }
 
     const { address: recipient } = await getInboundDataByChain(assetValue.chain);

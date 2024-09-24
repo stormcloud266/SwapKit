@@ -2,7 +2,7 @@ import type { Keplr } from "@keplr-wallet/types";
 import type { Eip1193Provider } from "@lastnetwork/toolbox-evm";
 import type { SolanaProvider } from "@lastnetwork/toolbox-solana";
 
-export { xdefiWallet, XDEFI_SUPPORTED_CHAINS } from "./xdefiWallet.ts";
+export { xdefiWallet, XDEFI_SUPPORTED_CHAINS } from "./xdefiWallet";
 
 type XdefiSolana = SolanaProvider & { isXDEFI: boolean };
 

@@ -1,6 +1,7 @@
 import type { CosmosWallets, ThorchainWallets } from "@lastnetwork/toolbox-cosmos";
 import type { EVMWallets } from "@lastnetwork/toolbox-evm";
-import type { SolanaWallet } from "@lastnetwork/toolbox-solana";
+import type { RadixWallets } from "@lastnetwork/toolbox-radix";
+import type { SolanaWallets } from "@lastnetwork/toolbox-solana";
 import type { SubstrateWallets } from "@lastnetwork/toolbox-substrate";
 import type { UTXOWallets } from "@lastnetwork/toolbox-utxo";
 import type { Eip1193Provider } from "ethers";
@@ -27,6 +28,7 @@ export enum WalletOption {
   KEPLR = "KEPLR",
   KEYSTORE = "KEYSTORE",
   LEDGER = "LEDGER",
+  LEDGER_LIVE = "LEDGER_LIVE",
   METAMASK = "METAMASK",
   OKX = "OKX",
   OKX_MOBILE = "OKX_MOBILE",
@@ -61,7 +63,13 @@ export type BaseWallet<T extends EmptyWallet | Record<string, unknown>> = {
 };
 
 export type FullWallet = BaseWallet<
-  EVMWallets & UTXOWallets & CosmosWallets & ThorchainWallets & SubstrateWallets & SolanaWallet
+  EVMWallets &
+    UTXOWallets &
+    CosmosWallets &
+    ThorchainWallets &
+    SubstrateWallets &
+    SolanaWallets &
+    RadixWallets
 >;
 
 /**
@@ -69,7 +77,7 @@ export type FullWallet = BaseWallet<
  */
 export type Wallet = FullWallet;
 
-export type SwapKitWallet<ConnectParams extends Todo[]> = (
+export type SwapKitWallet<ConnectParams extends any[]> = (
   params: ConnectWalletParams,
 ) => (...connectParams: ConnectParams) => boolean | Promise<boolean>;
 

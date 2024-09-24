@@ -14,6 +14,7 @@ import { decryptFromKeystore } from "@lastnetwork/wallet-keystore";
 import { useCallback, useState } from "react";
 
 import type { Eip1193Provider } from "@lastnetwork/toolbox-evm";
+import { PHANTOM_SUPPORTED_CHAINS } from "@lastnetwork/wallet-phantom";
 import type { SwapKitClient } from "./swapKitClient";
 
 type Props = {
@@ -22,15 +23,7 @@ type Props = {
   skClient?: SwapKitClient;
 };
 
-const walletOptions = Object.values(WalletOption).filter(
-  (o) =>
-    ![
-      WalletOption.KEPLR,
-      WalletOption.EXODUS,
-      WalletOption.RADIX_WALLET,
-      WalletOption.PHANTOM,
-    ].includes(o),
-);
+const walletOptions = Object.values(WalletOption).filter((o) => ![WalletOption.EXODUS].includes(o));
 
 const AllChainsSupported = [
   Chain.Arbitrum,
@@ -59,11 +52,11 @@ export const availableChainsByWallet = {
   [WalletOption.COINBASE_MOBILE]: EVMChains,
   [WalletOption.COINBASE_WEB]: EVMChains,
   [WalletOption.EIP6963]: EVMChains,
-  [WalletOption.KEPLR]: [Chain.Cosmos],
+  [WalletOption.KEPLR]: [Chain.Cosmos, Chain.Kujira],
   [WalletOption.LEDGER]: AllChainsSupported,
   [WalletOption.METAMASK]: EVMChains,
   [WalletOption.OKX_MOBILE]: EVMChains,
-  [WalletOption.PHANTOM]: [Chain.Solana],
+  [WalletOption.PHANTOM]: PHANTOM_SUPPORTED_CHAINS,
   [WalletOption.POLKADOT_JS]: [Chain.Polkadot],
   [WalletOption.TRUSTWALLET_WEB]: EVMChains,
   [WalletOption.XDEFI]: AllChainsSupported,
@@ -122,17 +115,15 @@ export const availableChainsByWallet = {
   [WalletOption.TALISMAN]: [
     Chain.Ethereum,
     Chain.Arbitrum,
+    Chain.Avalanche,
     Chain.Polygon,
     Chain.BinanceSmartChain,
     Chain.Optimism,
     Chain.Polkadot,
   ],
-  //   [WalletOption.EXODUS]: [
-  //     Chain.Ethereum,
-  //     Chain.BinanceSmartChain,
-  //     Chain.Polygon,
-  //     Chain.Bitcoin,
-  //   ],
+  [WalletOption.EXODUS]: [Chain.Ethereum, Chain.BinanceSmartChain, Chain.Polygon, Chain.Bitcoin],
+  [WalletOption.LEDGER_LIVE]: [],
+  [WalletOption.RADIX_WALLET]: [Chain.Radix],
 };
 
 export const WalletPicker = ({ skClient, setWallet, setPhrase }: Props) => {
@@ -140,7 +131,7 @@ export const WalletPicker = ({ skClient, setWallet, setPhrase }: Props) => {
   const [chains, setChains] = useState([]);
 
   const connectWallet = useCallback(
-    (option: WalletOption, provider?: Eip1193Provider) => {
+    async (option: WalletOption, provider?: Eip1193Provider) => {
       if (!skClient) return alert("client is not ready");
       switch (option) {
         case WalletOption.COINBASE_WEB:
@@ -152,14 +143,16 @@ export const WalletPicker = ({ skClient, setWallet, setPhrase }: Props) => {
         case WalletOption.TALISMAN:
           // @ts-ignore
           return skClient.connectTalisman(chains);
-        // case WalletOption.KEEPKEY: {
-        //   const derivationPaths = chains.map((chain) =>
-        //     getDerivationPathFor({ chain, index: 0 })
-        //   );
-        // await skClient.connectKeepkey?.(chains, derivationPaths);
-        // localStorage.setItem("keepkeyApiKey", "1234");
-        // return true;
-        // }
+        case WalletOption.KEPLR:
+          // @ts-ignore
+          return skClient.connectKeplr(chains);
+        case WalletOption.KEEPKEY: {
+          const derivationPaths = chains.map((chain) => getDerivationPathFor({ chain, index: 0 }));
+
+          await skClient.connectKeepkey?.(chains, derivationPaths);
+          localStorage.setItem("keepkeyApiKey", "1234");
+          return true;
+        }
         case WalletOption.TREZOR:
         case WalletOption.LEDGER: {
           const [chain] = chains;
@@ -187,7 +180,9 @@ export const WalletPicker = ({ skClient, setWallet, setPhrase }: Props) => {
         //   return skClient.connectRadixWallet?.();
 
         case WalletOption.PHANTOM:
-          return skClient.connectPhantom?.(chains[0]);
+          return skClient.connectPhantom?.(chains);
+        case WalletOption.RADIX_WALLET:
+          return skClient.connectRadixWallet?.([Chain.Radix]);
 
         default:
           throw new Error(`Unsupported wallet option: ${option}`);
@@ -197,7 +192,7 @@ export const WalletPicker = ({ skClient, setWallet, setPhrase }: Props) => {
   );
 
   const handleKeystoreConnection = useCallback(
-    async ({ target }: Todo) => {
+    async ({ target }: any) => {
       if (!skClient) return alert("client is not ready");
       setLoading(true);
 
@@ -264,8 +259,8 @@ export const WalletPicker = ({ skClient, setWallet, setPhrase }: Props) => {
     );
   }, []);
 
-  const handleMultipleSelect = useCallback((e: Todo) => {
-    const selectedChains = Array.from(e.target.selectedOptions).map((o: Todo) => o.value);
+  const handleMultipleSelect = useCallback((e: any) => {
+    const selectedChains = Array.from(e.target.selectedOptions).map((o: any) => o.value);
 
     if (selectedChains.length > 1) {
       setChains(selectedChains as never);

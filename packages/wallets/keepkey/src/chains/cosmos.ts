@@ -8,7 +8,7 @@ import {
 } from "@lastnetwork/helpers";
 import type { BaseCosmosToolboxType, TransferParams } from "@lastnetwork/toolbox-cosmos";
 
-import { bip32ToAddressNList } from "../helpers/coins.ts";
+import { bip32ToAddressNList } from "../helpers/coins";
 
 export const cosmosWalletMethods = async ({
   sdk,

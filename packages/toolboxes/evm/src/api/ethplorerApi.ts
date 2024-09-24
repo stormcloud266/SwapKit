@@ -1,6 +1,6 @@
 import { Chain, RequestClient, formatBigIntToSafeValue } from "@lastnetwork/helpers";
 
-import type { AddressInfo } from "../types/ethplorer-api-types.ts";
+import type { AddressInfo } from "../types/ethplorer-api-types";
 
 export const ethplorerApi = (apiKey = "freekey", sepolia = false) => ({
   getBalance: async (address: string) => {

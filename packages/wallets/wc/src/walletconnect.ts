@@ -23,10 +23,10 @@ import {
   DEFAULT_LOGGER,
   DEFAULT_RELAY_URL,
   THORCHAIN_MAINNET_ID,
-} from "./constants.ts";
-import { getEVMSigner } from "./evmSigner.ts";
-import { chainToChainId, getAddressByChain } from "./helpers.ts";
-import { getRequiredNamespaces } from "./namespaces.ts";
+} from "./constants";
+import { getEVMSigner } from "./evmSigner";
+import { chainToChainId, getAddressByChain } from "./helpers";
+import { getRequiredNamespaces } from "./namespaces";
 
 export const WC_SUPPORTED_CHAINS = [
   Chain.Arbitrum,
@@ -128,16 +128,18 @@ async function getToolbox({
           buildAminoMsg({ chain: Chain.THORChain, assetValue, memo, from: address, ...rest }),
         ];
 
+        const chainId = ChainId.THORChain;
+
         const signDoc = makeSignDoc(
           msgs,
           fee,
-          ChainId.THORChain,
+          chainId,
           memo,
           accountNumber?.toString(),
           sequence?.toString() || "0",
         );
 
-        const signature: Todo = await signRequest(signDoc);
+        const signature: any = await signRequest(signDoc);
 
         const bodyBytes = buildEncodedTxBody({
           chain: Chain.THORChain,
@@ -221,7 +223,7 @@ async function getWalletconnect(
     const session = await client.connect({ requiredNamespaces });
 
     const accounts = Object.values(session.namespaces).flatMap(
-      (namespace: Todo) => namespace.accounts,
+      (namespace: any) => namespace.accounts,
     );
 
     const disconnect = async () => {

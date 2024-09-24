@@ -2,14 +2,14 @@ export const list = {
   provider: "PANGOLIN_V1",
   chainId: "43114",
   name: "PANGOLIN_V1",
-  timestamp: "2024-08-08T08:30:30.337Z",
+  timestamp: "2024-09-23T08:30:48.297Z",
   version: {
     major: 1,
     minor: 0,
     patch: 0,
   },
   keywords: [],
-  count: 15,
+  count: 16,
   tokens: [
     {
       address: "0xf20d962a6c8f70c731bd838a3a388D7d48fA6e15",
@@ -20,6 +20,16 @@ export const list = {
       logoURI:
         "https://storage.googleapis.com/token-list-swapkit-dev/images/avax.eth-0xf20d962a6c8f70c731bd838a3a388d7d48fa6e15.png",
       ticker: "ETH",
+    },
+    {
+      address: "0x65378b697853568dA9ff8EaB60C13E1Ee9f4a654",
+      chain: "AVAX",
+      chainId: "43114",
+      decimals: 18,
+      identifier: "AVAX.HUSKY-0X65378B697853568DA9FF8EAB60C13E1EE9F4A654",
+      logoURI:
+        "https://storage.googleapis.com/token-list-swapkit-dev/images/avax.husky-0x65378b697853568da9ff8eab60c13e1ee9f4a654.png",
+      ticker: "HUSKY",
     },
     {
       address: "0x5947BB275c521040051D82396192181b413227A3",
@@ -60,6 +70,16 @@ export const list = {
       logoURI:
         "https://storage.googleapis.com/token-list-swapkit-dev/images/avax.savax-0x2b2c81e08f1af8835a78bb2a90ae924ace0ea4be.png",
       ticker: "SAVAX",
+    },
+    {
+      address: "0x6e7f5C0b9f4432716bDd0a77a3601291b9D9e985",
+      chain: "AVAX",
+      chainId: "43114",
+      decimals: 9,
+      identifier: "AVAX.SPORE-0X6E7F5C0B9F4432716BDD0A77A3601291B9D9E985",
+      logoURI:
+        "https://storage.googleapis.com/token-list-swapkit-dev/images/avax.spore-0x6e7f5c0b9f4432716bdd0a77a3601291b9d9e985.png",
+      ticker: "SPORE",
     },
     {
       address: "0x9d871BD3D730F416D5d06Ff8BC17bE4119070552",
@@ -150,16 +170,6 @@ export const list = {
       logoURI:
         "https://storage.googleapis.com/token-list-swapkit-dev/images/avax.xava-0xd1c3f94de7e5b45fa4edbba472491a9f4b166fc4.png",
       ticker: "XAVA",
-    },
-    {
-      address: "0x59414b3089ce2AF0010e7523Dea7E2b35d776ec7",
-      chain: "AVAX",
-      chainId: "43114",
-      decimals: 18,
-      identifier: "AVAX.YAK-0X59414B3089CE2AF0010E7523DEA7E2B35D776EC7",
-      logoURI:
-        "https://storage.googleapis.com/token-list-swapkit-dev/images/avax.yak-0x59414b3089ce2af0010e7523dea7e2b35d776ec7.png",
-      ticker: "YAK",
     },
   ],
 } as const;

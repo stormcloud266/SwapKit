@@ -13,7 +13,7 @@ import {
 } from "@lastnetwork/toolbox-evm";
 import type EthereumApp from "@ledgerhq/hw-app-eth";
 
-import { getLedgerTransport } from "../helpers/getLedgerTransport.ts";
+import { getLedgerTransport } from "../helpers/getLedgerTransport";
 
 class EVMLedgerInterface extends AbstractSigner {
   public chainId: ChainId = ChainId.Ethereum;
@@ -91,7 +91,7 @@ class EVMLedgerInterface extends AbstractSigner {
   };
 
   // TODO: fix typing infer from ethers
-  sendTransaction = async (tx: TransactionRequest): Promise<Todo> => {
+  sendTransaction = async (tx: TransactionRequest): Promise<any> => {
     if (!this.provider) throw new Error("No provider set");
 
     const signedTxHex = await this.signTransaction(tx);
